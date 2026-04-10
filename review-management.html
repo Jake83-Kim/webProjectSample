@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>후기 관리</title>
+    <link rel="stylesheet" href="owner-theme.css" />
+  </head>
+  <body>
+    <div class="mobile-backdrop" data-sidebar-close></div>
+    <div class="owner-shell">
+      <aside class="sidebar"></aside>
+      <main class="main">
+        <header class="topbar">
+          <div class="topbar-left">
+            <button class="sidebar-toggle" type="button" data-sidebar-toggle>☰</button>
+            <div>
+              <h1 class="page-title">후기 관리</h1>
+              <p class="page-copy">고객 후기를 모니터링하고 답변 우선순위를 정리하는 화면입니다.</p>
+            </div>
+          </div>
+        </header>
+
+        <section class="content">
+          <section class="hero-banner">
+            <h2>좋은 후기는 강화하고, 불편 후기는 빠르게 대응하는 흐름</h2>
+            <p>평점 추이, 최근 리뷰, 답변이 필요한 항목을 같은 컨셉 안에서 관리할 수 있도록 구성했습니다.</p>
+          </section>
+
+          <section class="stats-grid">
+            <article>
+              <p class="stat-label">평균 평점</p>
+              <div class="stat-value">4.8</div>
+              <p class="stat-foot">최근 30일 기준</p>
+            </article>
+            <article>
+              <p class="stat-label">새 리뷰</p>
+              <div class="stat-value">12건</div>
+              <p class="stat-foot">이번 주 등록</p>
+            </article>
+            <article>
+              <p class="stat-label">답변 필요</p>
+              <div class="stat-value">3건</div>
+              <p class="stat-foot">우선 확인 권장</p>
+            </article>
+          </section>
+
+          <div class="split-grid">
+            <section class="panel">
+              <div class="panel-head">
+                <div>
+                  <h3>최근 후기</h3>
+                  <p>고객 경험 흐름을 빠르게 읽을 수 있습니다.</p>
+                </div>
+              </div>
+              <ul class="info-list">
+                <li>
+                  <strong>김손님</strong>
+                  <div class="meta"><span>평점 5점</span><span>분위기와 응대 만족</span></div>
+                </li>
+                <li>
+                  <strong>박손님</strong>
+                  <div class="meta"><span>평점 4점</span><span>좌석 간격이 좋았다는 평가</span></div>
+                </li>
+                <li>
+                  <strong>이손님</strong>
+                  <div class="meta"><span>평점 3점</span><span class="badge warning">답변 필요</span></div>
+                </li>
+              </ul>
+            </section>
+
+            <section class="panel">
+              <div class="panel-head">
+                <div>
+                  <h3>답변 작성</h3>
+                  <p>후기 응대 톤을 유지하면서 빠르게 답변합니다.</p>
+                </div>
+              </div>
+              <div class="field-grid">
+                <div class="field full">
+                  <label for="review-target">대상 후기</label>
+                  <input id="review-target" type="text" value="이손님 - 좌석 대기 시간 의견" />
+                </div>
+                <div class="field full">
+                  <label for="review-reply">답변 내용</label>
+                  <textarea id="review-reply">불편을 드려 죄송합니다. 다음 방문 시 더 빠른 안내를 드릴 수 있도록 운영 흐름을 개선하겠습니다.</textarea>
+                </div>
+              </div>
+              <div class="button-row">
+                <button class="btn-primary" type="button">답변 등록</button>
+              </div>
+            </section>
+          </div>
+        </section>
+
+        <footer class="footer">
+          <div class="footer-grid">
+            <div>
+              <h5>바로가자</h5>
+              <p>Copyright © 2025, 회사명 Co., Ltd.</p>
+            </div>
+            <div class="footer-links">
+              <a href="notice.html">공지사항</a>
+              <a href="faq.html">FAQ</a>
+            </div>
+            <div>
+              <p>주식회사 OOOOOOO</p>
+              <p>대표자명 OOO</p>
+              <p>대표번호 000-0000-0000</p>
+            </div>
+          </div>
+        </footer>
+      </main>
+    </div>
+    <script src="owner-shell.js"></script>
+  </body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>바 소식 관리</title>
+    <link rel="stylesheet" href="owner-theme.css" />
+  </head>
+  <body>
+    <div class="mobile-backdrop" data-sidebar-close></div>
+    <div class="owner-shell">
+      <aside class="sidebar"></aside>
+      <main class="main">
+        <header class="topbar">
+          <div class="topbar-left">
+            <button class="sidebar-toggle" type="button" data-sidebar-toggle>☰</button>
+            <div>
+              <h1 class="page-title">바 소식 관리</h1>
+              <p class="page-copy">매장 공지와 프로모션 소식을 같은 대시보드 톤으로 작성합니다.</p>
+            </div>
+          </div>
+        </header>
+
+        <section class="content">
+          <section class="hero-banner">
+            <h2>운영 공지, 이벤트, 시즌 메뉴 소식을 브랜드 톤에 맞게 관리합니다.</h2>
+            <p>소식 등록과 노출 예정 콘텐츠를 한 화면에서 함께 볼 수 있도록 구성했습니다.</p>
+          </section>
+
+          <div class="split-grid">
+            <section class="panel">
+              <div class="panel-head">
+                <div>
+                  <h3>소식 등록</h3>
+                  <p>방문 전 고객이 확인할 공지와 이벤트를 작성합니다.</p>
+                </div>
+              </div>
+              <div class="field-grid">
+                <div class="field full">
+                  <label for="news-title">제목</label>
+                  <input id="news-title" type="text" placeholder="예: 주말 라이브 재즈 나이트 안내" />
+                </div>
+                <div class="field full">
+                  <label for="news-content">내용</label>
+                  <textarea id="news-content" placeholder="노출할 내용을 입력하세요."></textarea>
+                </div>
+              </div>
+              <div class="button-row">
+                <button class="btn-primary" type="button">소식 등록</button>
+              </div>
+            </section>
+
+            <section class="panel">
+              <div class="panel-head">
+                <div>
+                  <h3>노출 예정</h3>
+                  <p>현재 상단에 보이는 주요 소식입니다.</p>
+                </div>
+              </div>
+              <ul class="info-list">
+                <li>
+                  <strong>주말 DJ 나이트</strong>
+                  <div class="meta"><span>4월 12일 노출 예정</span><span class="badge success">예약됨</span></div>
+                </li>
+                <li>
+                  <strong>시즌 칵테일 출시</strong>
+                  <div class="meta"><span>4월 15일 노출 예정</span></div>
+                </li>
+              </ul>
+            </section>
+          </div>
+        </section>
+
+        <footer class="footer">
+          <div class="footer-grid">
+            <div>
+              <h5>바로가자</h5>
+              <p>Copyright © 2025, 회사명 Co., Ltd.</p>
+            </div>
+            <div class="footer-links">
+              <a href="notice.html">공지사항</a>
+              <a href="faq.html">FAQ</a>
+            </div>
+            <div>
+              <p>주식회사 OOOOOOO</p>
+              <p>대표자명 OOO</p>
+              <p>대표번호 000-0000-0000</p>
+            </div>
+          </div>
+        </footer>
+      </main>
+    </div>
+    <script src="owner-shell.js"></script>
+  </body>
+</html>
