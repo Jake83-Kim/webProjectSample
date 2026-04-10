@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>사장님 페이지 - 바 관리 시스템</title>
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #f8fafc;
+        color: #1f2937;
+      }
+      .header {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 2rem;
+        text-align: center;
+      }
+      .header h1 {
+        margin: 0;
+        font-size: 2.5rem;
+      }
+      .header p {
+        margin: 0.5rem 0 0 0;
+        opacity: 0.9;
+      }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+      }
+      .card {
+        background: white;
+        border-radius: 12px;
+        padding: 1.5rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+      .card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+      }
+      .card h3 {
+        margin: 0 0 1rem 0;
+        color: #1f2937;
+        font-size: 1.25rem;
+      }
+      .card p {
+        margin: 0 0 1rem 0;
+        color: #6b7280;
+        line-height: 1.5;
+      }
+      .features {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
+      .feature {
+        background: #e0f2fe;
+        color: #0277bd;
+        padding: 0.25rem 0.75rem;
+        border-radius: 20px;
+        font-size: 0.875rem;
+        font-weight: 500;
+      }
+      .btn {
+        background: #2563eb;
+        color: white;
+        border: none;
+        padding: 0.75rem 1.5rem;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 1rem;
+        font-weight: 500;
+        transition: background 0.2s;
+        width: 100%;
+      }
+      .btn:hover {
+        background: #1d4ed8;
+      }
+      .back-link {
+        display: inline-block;
+        margin-top: 2rem;
+        color: #2563eb;
+        text-decoration: none;
+        font-weight: 500;
+      }
+      .back-link:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1>🍸 사장님 전용 관리 시스템</h1>
+      <p>바 운영을 위한 모든 기능을 한 곳에서 관리하세요</p>
+    </div>
+
+    <div class="container">
+      <div class="grid">
+        <div class="card">
+          <h3>👤 사장님 계정 관리</h3>
+          <p>회원가입, 로그인, 아이디/비밀번호 찾기 등 계정 관련 기능을 관리합니다.</p>
+          <div class="features">
+            <span class="feature">회원가입</span>
+            <span class="feature">로그인</span>
+            <span class="feature">아이디 찾기</span>
+            <span class="feature">비밀번호 찾기</span>
+          </div>
+          <button class="btn" onclick="alert('계정 관리 페이지로 이동')">관리하기</button>
+        </div>
+
+        <div class="card">
+          <h3>🏪 바 정보 관리</h3>
+          <p>바 정보 등록/수정, 후기 확인, 가게 소식, 예약 문의 관리를 한 곳에서.</p>
+          <div class="features">
+            <span class="feature">정보 등록/수정</span>
+            <span class="feature">후기 보기</span>
+            <span class="feature">가게 소식 관리</span>
+            <span class="feature">예약 문의</span>
+          </div>
+          <button class="btn" onclick="alert('바 정보 관리 페이지로 이동')">관리하기</button>
+        </div>
+
+        <div class="card">
+          <h3>🎫 쿠폰 관리</h3>
+          <p>고객 쿠폰 사용 처리 및 관리를 효율적으로 진행합니다.</p>
+          <div class="features">
+            <span class="feature">쿠폰 사용 처리</span>
+            <span class="feature">쿠폰 현황</span>
+          </div>
+          <button class="btn" onclick="alert('쿠폰 관리 페이지로 이동')">관리하기</button>
+        </div>
+
+        <div class="card">
+          <h3>👥 알바 구인/구직 관리</h3>
+          <p>알바생 구인/구직을 위한 플랫폼으로 채용 과정을 간소화합니다.</p>
+          <div class="features">
+            <span class="feature">구인/구직 조회</span>
+            <span class="feature">상세 보기</span>
+            <span class="feature">등록 기능</span>
+            <span class="feature">채팅 기능</span>
+          </div>
+          <button class="btn" onclick="alert('알바 관리 페이지로 이동')">관리하기</button>
+        </div>
+
+        <div class="card">
+          <h3>💳 결제 관리</h3>
+          <p>구독 결제 및 결제 이력을 체계적으로 관리합니다.</p>
+          <div class="features">
+            <span class="feature">구독 결제</span>
+            <span class="feature">결제 이력 보기</span>
+          </div>
+          <button class="btn" onclick="alert('결제 관리 페이지로 이동')">관리하기</button>
+        </div>
+
+        <div class="card">
+          <h3>🛒 사장님 쇼핑</h3>
+          <p>바 운영에 필요한 상품을 검색하고 발주 요청을 합니다.</p>
+          <div class="features">
+            <span class="feature">상품 조회/검색</span>
+            <span class="feature">상세 보기</span>
+            <span class="feature">발주 요청</span>
+          </div>
+          <button class="btn" onclick="alert('쇼핑 페이지로 이동')">쇼핑하기</button>
+        </div>
+
+        <div class="card">
+          <h3>📋 발주 이력 관리</h3>
+          <p>과거 발주 내역을 확인하고 관리합니다.</p>
+          <div class="features">
+            <span class="feature">발주 이력 보기</span>
+            <span class="feature">주문 상태 확인</span>
+          </div>
+          <button class="btn" onclick="alert('발주 이력 페이지로 이동')">확인하기</button>
+        </div>
+
+        <div class="card">
+          <h3>🔔 알림 시스템</h3>
+          <p>중요한 알림을 실시간으로 받아보세요.</p>
+          <div class="features">
+            <span class="feature">실시간 알림</span>
+            <span class="feature">알림 설정</span>
+          </div>
+          <button class="btn" onclick="alert('알림 페이지로 이동')">알림 확인</button>
+        </div>
+
+        <div class="card">
+          <h3>💬 고객지원 CS</h3>
+          <p>플랫폼 이용에 대한 문의와 지원을 받을 수 있습니다.</p>
+          <div class="features">
+            <span class="feature">FAQ</span>
+            <span class="feature">공지사항</span>
+            <span class="feature">1:1 문의</span>
+            <span class="feature">약관 열람</span>
+          </div>
+          <button class="btn" onclick="alert('고객지원 페이지로 이동')">문의하기</button>
+        </div>
+      </div>
+
+      <div style="text-align: center;">
+        <a href="/" class="back-link">홈으로 돌아가기</a>
+      </div>
+    </div>
+  </body>
+</html>
