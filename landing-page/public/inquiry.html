@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1:1 문의</title>
+    <link rel="stylesheet" href="owner-theme.css" />
+  </head>
+  <body>
+    <div class="mobile-backdrop" data-sidebar-close></div>
+    <div class="owner-shell">
+      <aside class="sidebar"></aside>
+      <main class="main">
+        <header class="topbar">
+          <div class="topbar-left">
+            <button class="sidebar-toggle" type="button" data-sidebar-toggle>☰</button>
+            <div>
+              <h1 class="page-title">1:1 문의</h1>
+              <p class="page-copy">운영 중 생긴 이슈를 접수하고 답변 상태를 확인하는 화면입니다.</p>
+            </div>
+          </div>
+        </header>
+
+        <section class="content">
+          <section class="hero-banner">
+            <h2>해결이 필요한 운영 이슈를 남기고 처리 상태를 바로 확인합니다.</h2>
+            <p>문의 작성과 기존 문의 히스토리를 같은 화면 안에서 관리할 수 있습니다.</p>
+          </section>
+
+          <div class="split-grid">
+            <section class="panel">
+              <div class="panel-head">
+                <div>
+                  <h3>문의 작성</h3>
+                  <p>상세한 상황을 남겨 빠르게 지원받습니다.</p>
+                </div>
+              </div>
+              <div class="field-grid">
+                <div class="field full">
+                  <label for="inquiry-title">문의 제목</label>
+                  <input id="inquiry-title" type="text" placeholder="예: 예약 문의 알림이 오지 않습니다." />
+                </div>
+                <div class="field full">
+                  <label for="inquiry-content">문의 내용</label>
+                  <textarea id="inquiry-content" placeholder="문제 상황을 구체적으로 입력해 주세요."></textarea>
+                </div>
+              </div>
+              <div class="button-row">
+                <button class="btn-primary" type="button">문의 접수</button>
+              </div>
+            </section>
+
+            <section class="panel">
+              <div class="panel-head">
+                <div>
+                  <h3>최근 문의 상태</h3>
+                  <p>접수된 이슈와 처리 진행 상태입니다.</p>
+                </div>
+              </div>
+              <ul class="info-list">
+                <li>
+                  <strong>결제 실패 문의</strong>
+                  <div class="meta"><span>2026.04.09</span><span class="badge success">답변완료</span></div>
+                </li>
+                <li>
+                  <strong>채팅 알림 설정 문의</strong>
+                  <div class="meta"><span>2026.04.10</span><span class="badge warning">처리중</span></div>
+                </li>
+              </ul>
+            </section>
+          </div>
+        </section>
+
+        <footer class="footer">
+          <div class="footer-grid">
+            <div>
+              <h5>바로가자</h5>
+              <p>Copyright © 2025, 회사명 Co., Ltd.</p>
+            </div>
+            <div class="footer-links">
+              <a href="notice.html">공지사항</a>
+              <a href="faq.html">FAQ</a>
+            </div>
+            <div>
+              <p>주식회사 OOOOOOO</p>
+              <p>대표자명 OOO</p>
+              <p>대표번호 000-0000-0000</p>
+            </div>
+          </div>
+        </footer>
+      </main>
+    </div>
+    <script src="owner-shell.js"></script>
+  </body>
+</html>

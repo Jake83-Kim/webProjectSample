@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>채팅</title>
+    <link rel="stylesheet" href="owner-theme.css" />
+  </head>
+  <body>
+    <div class="mobile-backdrop" data-sidebar-close></div>
+    <div class="owner-shell">
+      <aside class="sidebar"></aside>
+      <main class="main">
+        <header class="topbar">
+          <div class="topbar-left">
+            <button class="sidebar-toggle" type="button" data-sidebar-toggle>☰</button>
+            <div>
+              <h1 class="page-title">채팅</h1>
+              <p class="page-copy">고객과 지원자 대화를 한곳에서 확인하는 운영용 채팅 화면입니다.</p>
+            </div>
+          </div>
+        </header>
+
+        <section class="content">
+          <section class="hero-banner">
+            <h2>실시간 대화 흐름을 놓치지 않도록 채팅도 같은 운영 컨셉으로 통일했습니다.</h2>
+            <p>최근 대화 목록과 현재 대화 내용을 동시에 확인할 수 있도록 구성했습니다.</p>
+          </section>
+
+          <div class="split-grid">
+            <section class="panel">
+              <div class="panel-head">
+                <div>
+                  <h3>대화 목록</h3>
+                  <p>지금 응답이 필요한 대화입니다.</p>
+                </div>
+              </div>
+              <ul class="info-list">
+                <li>
+                  <strong>홍길동</strong>
+                  <div class="meta"><span>예약 좌석 문의</span><span class="badge warning">미응답</span></div>
+                </li>
+                <li>
+                  <strong>이지원</strong>
+                  <div class="meta"><span>면접 일정 조율</span><span class="badge success">응답완료</span></div>
+                </li>
+              </ul>
+            </section>
+
+            <section class="panel">
+              <div class="panel-head">
+                <div>
+                  <h3>현재 대화</h3>
+                  <p>최근 메시지를 기준으로 빠르게 응답합니다.</p>
+                </div>
+              </div>
+              <ul class="plain-list">
+                <li>고객: 오늘 8시쯤 2명 방문 가능한가요?</li>
+                <li>사장님: 네, 현재 바 좌석 여유 있습니다.</li>
+                <li>고객: 조용한 자리로 부탁드릴게요.</li>
+              </ul>
+              <div class="field" style="margin-top: 18px;">
+                <label for="chat-reply">답변 입력</label>
+                <textarea id="chat-reply" placeholder="메시지를 입력하세요."></textarea>
+              </div>
+              <div class="button-row">
+                <button class="btn-primary" type="button">메시지 보내기</button>
+              </div>
+            </section>
+          </div>
+        </section>
+
+        <footer class="footer">
+          <div class="footer-grid">
+            <div>
+              <h5>바로가자</h5>
+              <p>Copyright © 2025, 회사명 Co., Ltd.</p>
+            </div>
+            <div class="footer-links">
+              <a href="notice.html">공지사항</a>
+              <a href="faq.html">FAQ</a>
+            </div>
+            <div>
+              <p>주식회사 OOOOOOO</p>
+              <p>대표자명 OOO</p>
+              <p>대표번호 000-0000-0000</p>
+            </div>
+          </div>
+        </footer>
+      </main>
+    </div>
+    <script src="owner-shell.js"></script>
+  </body>
+</html>
