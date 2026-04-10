@@ -1,40 +1,107 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at top left, rgba(17, 17, 17, 0.08), transparent 30%),
+    linear-gradient(180deg, #fbfcfe 0%, #f3f5f9 100%);
+  color: #111111;
+  font-family: "Pretendard", "Apple SD Gothic Neo", "Segoe UI", sans-serif;
 }
 
-.App-header {
-  background-color: #282c34;
+* {
+  box-sizing: border-box;
+}
+
+button,
+a {
+  font: inherit;
+}
+
+.app-shell {
   min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.app-hero {
+  width: min(760px, 100%);
+  padding: 40px;
+  border: 1px solid rgba(216, 222, 232, 0.9);
+  border-radius: 32px;
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 18px 48px rgba(17, 17, 17, 0.08);
+}
+
+.app-kicker {
+  margin: 0 0 14px;
+  color: #697386;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.app-hero h1 {
+  margin: 0;
+  font-size: clamp(2.1rem, 4vw, 3.5rem);
+  line-height: 1.15;
+  letter-spacing: -0.05em;
+}
+
+.app-description {
+  margin: 20px 0 0;
+  color: #4d5968;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.app-actions {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.app-actions button,
+.app-actions a {
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  min-height: 52px;
+  padding: 0 20px;
+  border-radius: 16px;
+  text-decoration: none;
+  font-weight: 700;
 }
 
-button {
-  font-size: 1rem;
-  padding: 10px 20px;
-  margin-top: 20px;
-  background-color: #61dafb;
+.app-actions button {
   border: none;
-  border-radius: 5px;
+  background: #111111;
+  color: #ffffff;
   cursor: pointer;
 }
 
-button:hover {
-  background-color: #21b4d6;
+.app-actions a {
+  border: 1px solid #d8dee8;
+  color: #111111;
+  background: #ffffff;
 }
 
-/* 반응형 디자인 */
-@media (max-width: 768px) {
-  .App-header {
-    font-size: calc(8px + 2vmin);
-    padding: 20px;
+@media (max-width: 640px) {
+  .app-shell {
+    padding: 18px;
   }
-  button {
-    font-size: 0.9rem;
-    padding: 8px 16px;
+
+  .app-hero {
+    padding: 28px 22px;
+    border-radius: 24px;
+  }
+
+  .app-actions {
+    flex-direction: column;
+  }
+
+  .app-actions button,
+  .app-actions a {
+    width: 100%;
   }
 }
