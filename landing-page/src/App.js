@@ -2,7 +2,7 @@ import './App.css';
 
 function App() {
   const handleLearnMore = () => {
-    window.open('/about.html', '_blank', 'noopener,noreferrer');
+    window.open(`${process.env.PUBLIC_URL}/about.html`, '_blank', 'noopener,noreferrer');
   };
 
   return (
