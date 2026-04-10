@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>더 알아보기</title>
+    <title>더 알아보기 - JAKE</title>
     <style>
       body {
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
@@ -11,10 +11,73 @@
         padding: 2rem;
         background: #f6f8fb;
         color: #1f2937;
+        line-height: 1.6;
       }
       .container {
         max-width: 640px;
         margin: 0 auto;
+        background: white;
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      }
+      .profile {
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+      .profile h1 {
+        color: #2563eb;
+        margin-bottom: 0.5rem;
+      }
+      .profile p {
+        color: #6b7280;
+        font-size: 1.1rem;
+      }
+      .section {
+        margin-bottom: 2rem;
+      }
+      .section h2 {
+        color: #374151;
+        border-bottom: 2px solid #e5e7eb;
+        padding-bottom: 0.5rem;
+        margin-bottom: 1rem;
+      }
+      .skills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
+      .skill {
+        background: #dbeafe;
+        color: #1e40af;
+        padding: 0.25rem 0.75rem;
+        border-radius: 20px;
+        font-size: 0.9rem;
+      }
+      .projects {
+        list-style: none;
+        padding: 0;
+      }
+      .projects li {
+        margin-bottom: 1rem;
+        padding: 1rem;
+        background: #f9fafb;
+        border-radius: 6px;
+        border-left: 4px solid #2563eb;
+      }
+      .projects a {
+        color: #2563eb;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      .projects a:hover {
+        text-decoration: underline;
+      }
+      .contact {
+        text-align: center;
+        margin-top: 2rem;
+        padding-top: 2rem;
+        border-top: 1px solid #e5e7eb;
       }
       a {
         color: #2563eb;
@@ -27,10 +90,60 @@
   </head>
   <body>
     <div class="container">
-      <h1>더 알아보기</h1>
-      <p>이 페이지는 "더 알아보기" 버튼을 눌렀을 때 새 창으로 열리는 페이지입니다.</p>
-      <p>여기에 프로젝트 소개, 추가 정보, 또는 링크를 자유롭게 추가할 수 있습니다.</p>
-      <p><a href="/">홈으로 돌아가기</a></p>
+      <div class="profile">
+        <h1>안녕하세요, JAKE입니다!</h1>
+        <p>프론트엔드 개발자 | 웹 애플리케이션 개발자</p>
+      </div>
+
+      <div class="section">
+        <h2>소개</h2>
+        <p>
+          안녕하세요! 저는 JAKE라고 합니다. 웹 개발에 열정을 가지고 있으며,
+          사용자 친화적인 웹 애플리케이션을 만드는 것을 좋아합니다.
+          React, JavaScript, HTML/CSS를 주로 사용하며, 새로운 기술을 배우는 것을 즐깁니다.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>기술 스택</h2>
+        <div class="skills">
+          <span class="skill">React</span>
+          <span class="skill">JavaScript</span>
+          <span class="skill">HTML/CSS</span>
+          <span class="skill">Node.js</span>
+          <span class="skill">Git</span>
+          <span class="skill">GitHub Pages</span>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>프로젝트</h2>
+        <ul class="projects">
+          <li>
+            <strong>Landing Page 프로젝트</strong><br>
+            React를 사용한 간단한 랜딩 페이지입니다. "더 알아보기" 버튼으로 이 페이지로 이동합니다.<br>
+            <a href="https://github.com/Jake83-Kim/webProjectSample" target="_blank">GitHub에서 보기</a>
+          </li>
+          <li>
+            <strong>개인 포트폴리오 사이트</strong><br>
+            앞으로 만들 예정인 포트폴리오 사이트입니다. 다양한 프로젝트를 소개할 계획입니다.
+          </li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>관심사</h2>
+        <p>
+          웹 개발 외에도 새로운 기술 트렌드를 따라가는 것을 좋아합니다.
+          특히 프론트엔드 생태계의 발전에 관심이 많습니다.
+          코드 리뷰와 협업을 통한 성장도 중요하게 생각합니다.
+        </p>
+      </div>
+
+      <div class="contact">
+        <p>더 궁금한 점이 있으시면 언제든 연락주세요!</p>
+        <p><a href="/">홈으로 돌아가기</a></p>
+      </div>
     </div>
   </body>
 </html>
