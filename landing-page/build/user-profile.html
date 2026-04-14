@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
@@ -7,19 +7,122 @@
     <link rel="stylesheet" href="user-theme.css" />
   </head>
   <body>
-    <div class="mobile-backdrop" data-sidebar-close></div>
     <div class="user-shell">
       <aside class="sidebar"></aside>
       <main class="main">
-        <header class="topbar"><div class="topbar-left"><button class="sidebar-toggle" type="button" data-sidebar-toggle>☰</button><div><h1 class="page-title">사용자 마이페이지</h1><p class="page-copy">사용자 프로필 수정과 선호 관리 중심의 마이페이지 화면입니다.</p></div></div><div class="topbar-right"><div class="status-pill"><span class="status-dot"></span><span>프로필 동기화 완료</span></div><div class="user-pill"><a href="/webProjectSample/">로그아웃</a></div></div></header>
-        <section class="content">
-          <section class="hero-banner"><p class="section-kicker">MY PAGE</p><h2>사용자 프로필을 쉽게 수정하고, 취향 데이터를 서비스 개인화로 이어지게 구성했습니다.</h2><p>닉네임, 사진, 관심 지역, 선호 분위기, 단골 바, 리뷰 활동을 한 곳에서 관리할 수 있도록 설계했습니다.</p></section>
-          <div class="split-grid">
-            <section class="panel"><div class="panel-head"><div><h3>프로필 수정</h3><p>웹과 앱 모두에서 수정 가능한 기본 정보입니다.</p></div></div><div class="field-grid"><div class="field"><label>닉네임</label><input type="text" value="달빛탐험가" /></div><div class="field"><label>관심 지역</label><input type="text" value="강남, 성수" /></div><div class="field full"><label>자기소개</label><textarea>재즈바와 클래식 칵테일을 좋아합니다.</textarea></div></div><div class="button-row"><button class="btn-primary" type="button">저장하기</button></div></section>
-            <section class="panel"><div class="panel-head"><div><h3>활동 요약</h3><p>개인화에 활용되는 사용자 활동 정보입니다.</p></div></div><ul class="info-list"><li><strong>단골가게</strong><div class="meta"><span>3곳 지정</span><span>최근 방문 2곳</span></div></li><li><strong>작성 후기</strong><div class="meta"><span>14개</span><span>사진 포함 9개</span></div></li><li><strong>좋아요 바</strong><div class="meta"><span>22곳 저장</span><span class="badge">알림 연동</span></div></li></ul></section>
-          </div>
+        <section class="page-head">
+          <h1>사용자 마이페이지</h1>
         </section>
-        <footer class="footer"><div class="footer-grid"><div><h5>BAROGO USER</h5><p>사용자 프로필 UX 샘플</p></div><div class="footer-links"><a href="user-bars.html">좋아요한 바</a><a href="user-notifications.html">알림 설정</a></div><div><p>프로필 수정과 개인화 데이터를 같은 구조로 연결</p></div></div></footer>
+
+        <section class="content content-stack">
+          <section class="hero-banner">
+            <p class="section-kicker">MY PAGE</p>
+            <h2>프로필 수정과 활동 관리가 분리되지 않도록, 사용자 데이터를 한 곳에서 정리하는 마이페이지</h2>
+            <p>닉네임, 소개, 관심 지역, 저장한 바, 후기 활동, 알림 연동 상태를 한 화면에서 확인하고 수정할 수 있도록 구성했습니다.</p>
+          </section>
+
+          <div class="split-grid">
+            <section class="panel">
+              <div class="panel-head">
+                <div>
+                  <h3>프로필 수정</h3>
+                  <p>웹과 모바일 모두에서 쉽게 수정할 수 있는 기본 프로필 편집 영역입니다.</p>
+                </div>
+              </div>
+              <div class="field-grid">
+                <div class="field">
+                  <label>닉네임</label>
+                  <input type="text" value="김바로" />
+                </div>
+                <div class="field">
+                  <label>관심 지역</label>
+                  <input type="text" value="성수, 한남" />
+                </div>
+                <div class="field full">
+                  <label>자기소개</label>
+                  <textarea>재즈 바와 조용한 위스키 바를 좋아해요. 새로운 공간도 자주 탐색합니다.</textarea>
+                </div>
+              </div>
+              <div class="button-row">
+                <button class="btn-primary" type="button">프로필 저장</button>
+              </div>
+            </section>
+
+            <section class="panel">
+              <div class="panel-head">
+                <div>
+                  <h3>내 활동 요약</h3>
+                  <p>저장한 취향과 최근 활동을 기반으로 개인화 흐름을 유지합니다.</p>
+                </div>
+              </div>
+              <ul class="info-list">
+                <li>
+                  <strong>단골 가게</strong>
+                  <div class="meta">
+                    <span>3곳 저장</span>
+                    <span>최근 방문 2곳</span>
+                  </div>
+                </li>
+                <li>
+                  <strong>작성 후기</strong>
+                  <div class="meta">
+                    <span>14건</span>
+                    <span>사진 포함 9건</span>
+                  </div>
+                </li>
+                <li>
+                  <strong>좋아요한 바</strong>
+                  <div class="meta">
+                    <span>22곳</span>
+                    <span class="badge">알림 연동</span>
+                  </div>
+                </li>
+              </ul>
+            </section>
+          </div>
+
+          <section class="detail-grid two-column">
+            <article class="detail-card">
+              <div class="section-title-row">
+                <h3>저장한 바와 활동</h3>
+                <a href="user-bars.html">바 큐레이션 보기</a>
+              </div>
+              <ul class="detail-list">
+                <li>좋아요한 바 목록</li>
+                <li>단골 지정 매장 관리</li>
+                <li>작성 후기 및 수정 내역</li>
+                <li>이벤트 참여와 쿠폰 사용 이력</li>
+              </ul>
+            </article>
+            <article class="detail-card accent-card">
+              <div class="section-title-row">
+                <h3>계정 설정 연결</h3>
+                <a href="user-account.html">계정 기능으로 이동</a>
+              </div>
+              <ul class="detail-list">
+                <li>프로필 수정 후 계정 보안 설정과 연결</li>
+                <li>소셜 연동 상태와 알림 수신 여부 표시</li>
+                <li>로그아웃, 탈퇴, 약관 열람 동선 준비</li>
+              </ul>
+            </article>
+          </section>
+        </section>
+
+        <footer class="footer">
+          <div class="footer-inner">
+            <div>
+              <div class="footer-brand">BAROGO</div>
+              <p>마이페이지 UX 시안</p>
+            </div>
+            <div class="footer-links">
+              <a href="user-bars.html">좋아요한 바</a>
+              <a href="user-notifications.html">알림 설정</a>
+            </div>
+            <div>
+              <p>프로필 수정, 활동 요약, 저장 정보 관리 흐름 포함</p>
+            </div>
+          </div>
+        </footer>
       </main>
     </div>
     <script src="user-shell.js"></script>
