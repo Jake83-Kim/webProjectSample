@@ -7,101 +7,44 @@
     <link rel="stylesheet" href="user-theme.css" />
   </head>
   <body>
-    <div class="mobile-backdrop" data-sidebar-close></div>
     <div class="user-shell">
       <aside class="sidebar"></aside>
       <main class="main">
-        <header class="topbar">
-          <div class="topbar-left">
-            <button class="sidebar-toggle" type="button" aria-label="메뉴 열기" data-sidebar-toggle>☰</button>
-            <div>
-              <h1 class="page-title">오늘 밤, 어디로 갈까요?</h1>
-              <p class="page-copy">취향에 맞는 바 추천과 오늘 사용할 수 있는 혜택을 앱 홈처럼 모아봤어요.</p>
-            </div>
-          </div>
-          <div class="topbar-right">
-            <div class="status-pill"><span class="status-dot"></span><span>강남 · 성수 주변 추천</span></div>
-            <div class="user-pill"><strong>홍길동 님</strong><span>맞춤 추천 중</span></div>
-            <div class="user-pill"><a href="/webProjectSample/">로그아웃</a></div>
-          </div>
-        </header>
-        <section class="content">
-          <section class="hero-banner">
-            <p class="section-kicker">Tonight Picks</p>
-            <h2>좋아요한 분위기와 최근 방문 기록을 바탕으로 오늘 어울리는 바를 골라드릴게요.</h2>
-            <p>재즈, 루프탑, 칵테일 바 취향을 기준으로 지금 예약하거나 저장하기 좋은 장소와 혜택을 함께 보여주는 사용자 홈 화면입니다.</p>
-            <div class="button-row">
-              <a class="btn-primary" href="user-bars.html">추천 바 보러가기</a>
-              <a class="btn-ghost" href="user-events.html">오늘의 이벤트</a>
-            </div>
-          </section>
-
-          <section class="stats-grid">
-            <article><p class="stat-label">오늘의 추천 바</p><div class="stat-value">12곳</div><p class="muted">취향과 거리 기반으로 선별된 추천</p></article>
-            <article><p class="stat-label">즉시 사용 쿠폰</p><div class="stat-value">4장</div><p class="muted">오늘 밤 바로 쓸 수 있는 혜택</p></article>
-            <article><p class="stat-label">새 소식 알림</p><div class="stat-value">7건</div><p class="muted">좋아요한 바와 이벤트 소식 모음</p></article>
-          </section>
-
-          <section class="feature-grid">
-            <article>
-              <h3>취향 맞춤 추천</h3>
-              <p>재즈, 로맨틱, 위스키 바 선호 데이터를 기준으로 홈 상단 추천 카드를 구성합니다.</p>
-              <div class="button-row"><a class="btn-primary" href="user-bars.html">추천 목록 보기</a></div>
-            </article>
-            <article>
-              <h3>이번 주 이벤트</h3>
-              <p>오늘 참여 가능한 기획전과 웰컴 드링크 이벤트를 배너 카드로 바로 보여줍니다.</p>
-              <div class="button-row"><a class="btn-primary" href="user-events.html">이벤트 보기</a></div>
-            </article>
-            <article>
-              <h3>내 혜택 지갑</h3>
-              <p>쿠폰, 좋아요 바 전용 혜택, 단골 리워드를 한 번에 확인할 수 있는 지갑형 화면입니다.</p>
-              <div class="button-row"><a class="btn-primary" href="user-coupons.html">쿠폰 열기</a></div>
-            </article>
-          </section>
-
-          <div class="split-grid">
-            <section class="panel">
-              <div class="panel-head"><div><h3>지금 뜨는 바</h3><p>앱 홈에서 바로 눌러보고 싶은 카드형 추천 섹션입니다.</p></div><a class="panel-link" href="user-bars.html">전체 보기</a></div>
-              <ul class="info-list">
-                <li><strong>문라이트 라운지</strong><div class="meta"><span>강남역 도보 4분</span><span>재즈 공연 21:00</span><span class="badge success">좋아요 1.2천</span></div></li>
-                <li><strong>어반 몰트 바</strong><div class="meta"><span>위스키 특화</span><span>조용한 분위기</span><span class="badge">단골 추천</span></div></li>
-                <li><strong>레트로 바이닐 펍</strong><div class="meta"><span>성수</span><span>오늘 DJ 나잇</span><span class="badge warning">이벤트 진행 중</span></div></li>
-              </ul>
-            </section>
-            <section class="panel">
-              <div class="panel-head"><div><h3>나를 위한 빠른 메뉴</h3><p>관리 기능이 아니라 실제 사용자 행동 중심으로 묶었습니다.</p></div></div>
-              <div class="button-row">
-                <a class="btn-secondary" href="user-account.html">로그인 / 가입</a>
-                <a class="btn-secondary" href="user-profile.html">내 프로필</a>
-                <a class="btn-secondary" href="user-notifications.html">알림함</a>
-                <a class="btn-secondary" href="user-support.html">도움말 센터</a>
-              </div>
-            </section>
-          </div>
-
-          <div class="split-grid">
-            <section class="panel">
-              <div class="panel-head"><div><h3>오늘의 혜택</h3><p>사용자 입장에서 가장 눈에 띄어야 하는 혜택 카드 영역입니다.</p></div></div>
-              <ul class="plain-list">
-                <li>신규 가입자 웰컴 드링크 쿠폰 1장</li>
-                <li>좋아요한 바 재방문 10% 할인 쿠폰</li>
-                <li>주중 심야 방문 한정 스페셜 이벤트</li>
-              </ul>
-            </section>
-            <section class="panel">
-              <div class="panel-head"><div><h3>새 소식 피드</h3><p>좋아요한 바와 고객지원 답변을 피드처럼 보여줍니다.</p></div></div>
-              <ul class="plain-list">
-                <li>문라이트 라운지에서 새 공연 일정을 등록했어요.</li>
-                <li>평일 10% 할인 쿠폰이 오늘 밤 11:59에 만료돼요.</li>
-                <li>1:1 문의 답변이 도착했어요. 지금 확인해보세요.</li>
-              </ul>
-            </section>
-          </div>
+        <section class="page-head">
+          <h1>사용자 홈</h1>
         </section>
-        <footer class="footer"><div class="footer-grid"><div><h5>BAROGO USER</h5><p>사용자 중심 홈 화면 컨셉</p></div><div class="footer-links"><a href="user-bars.html">추천 바</a><a href="user-events.html">이벤트</a></div><div><p>운영 도구가 아니라 실제 소비자 앱처럼 보이도록 리디자인한 사용자 홈입니다.</p></div></div></footer>
+        <section class="content">
+          <section class="search-hero">
+            <div class="search-copy">
+              <h2>바로가자에서 오늘 갈 바를 찾아보세요.</h2>
+              <p>바 탐색, 이벤트, 쿠폰, 마이페이지로 자연스럽게 이어지는 사용자 서비스 화면입니다.</p>
+            </div>
+            <div class="search-box-row">
+              <a class="sort-box" href="user-bars.html">바 탐색 바로가기</a>
+            </div>
+          </section>
+        </section>
       </main>
     </div>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <div>
+          <div class="footer-brand">바로가자</div>
+          <p>Copyright © 2025, 회사명 Co., Ltd.</p>
+        </div>
+        <div class="footer-links">
+          <a href="user-support.html">이용약관</a>
+          <a href="user-support.html"><strong>개인정보처리방침</strong></a>
+        </div>
+        <div>
+          <p>주식회사 OOOOOOO</p>
+          <p>대표자명 OOO</p>
+          <p>대표번호 000-0000-0000</p>
+        </div>
+      </div>
+    </footer>
+
     <script src="user-shell.js"></script>
   </body>
 </html>
