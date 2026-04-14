@@ -70,21 +70,23 @@
   }
 
   const navItems = [
-    { href: 'user.html', label: '서비스 홈' },
+    { href: 'user-bars.html', label: '바 탐색' },
+    { href: 'user-events.html', label: '이벤트' },
+    { href: 'user-coupons.html', label: '쿠폰' }
+  ];
+
+  const utilityItems = [
     { href: 'user-account.html', label: '계정' },
-    { href: 'user-bars.html', label: '바 큐레이션' },
-    { href: 'user-events.html', label: '기획전·이벤트' },
-    { href: 'user-coupons.html', label: '쿠폰' },
-    { href: 'user-profile.html', label: '마이페이지' },
-    { href: 'user-notifications.html', label: '알림' },
-    { href: 'user-support.html', label: '고객지원' }
+    { href: 'user-profile.html', label: 'MY' },
+    { href: 'user-support.html', label: '고객센터' },
+    { href: '/webProjectSample/', label: '로그아웃', logout: true }
   ];
 
   const mobileItems = [
-    { href: 'user.html', label: '홈' },
-    { href: 'user-bars.html', label: '바' },
+    { href: 'user-bars.html', label: '바탐색' },
     { href: 'user-events.html', label: '이벤트' },
     { href: 'user-coupons.html', label: '쿠폰' },
+    { href: 'user-notifications.html', label: '알림' },
     { href: 'user-profile.html', label: 'MY' }
   ];
 
@@ -93,6 +95,13 @@
       .map((item) => {
         const active = item.href === currentPage ? ' active' : '';
         return `<a class="site-nav-link${active}" href="${item.href}">${item.label}</a>`;
+      })
+      .join('');
+
+    const utilities = utilityItems
+      .map((item) => {
+        const attr = item.logout ? ' data-site-logout' : '';
+        return `<a class="utility-link" href="${item.href}"${attr}>${item.label}</a>`;
       })
       .join('');
 
@@ -107,21 +116,19 @@
       <header class="site-header">
         <div class="site-header-inner">
           <div class="site-brand-area">
-            <a class="site-brand" href="user.html">BAROGO</a>
+            <a class="site-brand" href="user.html">바로가자</a>
             <nav class="site-nav">${desktopNav}</nav>
           </div>
           <div class="site-actions">
             <a class="icon-link" href="user-notifications.html" aria-label="알림">알림</a>
-            <span class="welcome-copy"><strong>김바로 고객님</strong><span>오늘도 새로운 바를 추천해드릴게요.</span></span>
-            <a href="user-profile.html">MY</a>
-            <a href="user-support.html">고객지원</a>
-            <a href="/webProjectSample/" data-site-logout>로그아웃</a>
+            <span class="welcome-copy"><strong>OOO 님</strong><span>환영합니다.</span></span>
+            ${utilities}
           </div>
         </div>
       </header>
       <div class="mobile-topbar">
         <div class="mobile-topbar-inner">
-          <a class="mobile-brand" href="user.html"><span>APP</span><strong>BAROGO</strong></a>
+          <a class="mobile-brand" href="user.html"><strong>바로가자</strong></a>
           <a class="icon-link mobile" href="user-notifications.html" aria-label="알림">알림</a>
         </div>
       </div>
