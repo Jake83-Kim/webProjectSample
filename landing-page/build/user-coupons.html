@@ -3,25 +3,147 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>사용자 서비스 - 쿠폰 관리</title>
+    <title>사용자 서비스 - 쿠폰</title>
     <link rel="stylesheet" href="user-theme.css" />
   </head>
   <body>
-    <div class="mobile-backdrop" data-sidebar-close></div>
     <div class="user-shell">
       <aside class="sidebar"></aside>
       <main class="main">
-        <header class="topbar"><div class="topbar-left"><button class="sidebar-toggle" type="button" data-sidebar-toggle>☰</button><div><h1 class="page-title">쿠폰 관리 기능</h1><p class="page-copy">보유 쿠폰 목록과 사용 흐름을 웹과 모바일 앱 모두에 맞게 정리했습니다.</p></div></div><div class="topbar-right"><div class="status-pill"><span class="status-dot"></span><span>모바일 바코드 사용 준비</span></div><div class="user-pill"><a href="/webProjectSample/">로그아웃</a></div></div></header>
-        <section class="content">
-          <section class="hero-banner"><p class="section-kicker">COUPON</p><h2>사용 가능한 혜택을 빠르게 확인하고, 현장에서 바로 쓸 수 있는 쿠폰 경험을 제공합니다.</h2><p>쿠폰 상태를 명확히 구분하고, 사용 직전 안내와 유효기간 정보를 함께 제공해 이탈 없이 사용할 수 있게 구성했습니다.</p></section>
-          <div class="split-grid">
-            <section class="panel"><div class="panel-head"><div><h3>쿠폰 목록 보기</h3><p>보유, 사용 완료, 만료 예정 쿠폰을 분리합니다.</p></div></div><ul class="info-list"><li><strong>웰컴 드링크 1잔</strong><div class="meta"><span>문라이트 라운지</span><span>2026.04.30까지</span><span class="badge success">사용 가능</span></div></li><li><strong>평일 10% 할인 쿠폰</strong><div class="meta"><span>강남 지역 바 공통</span><span>오늘 자정 만료</span><span class="badge warning">만료 임박</span></div></li><li><strong>신규 가입 쿠폰</strong><div class="meta"><span>사용 완료</span><span class="badge">사용 이력 보관</span></div></li></ul></section>
-            <section class="panel"><div class="panel-head"><div><h3>쿠폰 사용 기능</h3><p>직원 확인용 정보와 사용자 안내를 함께 제공합니다.</p></div></div><ul class="plain-list"><li>매장 직원에게 제시할 바코드 또는 QR 노출</li><li>사용 조건, 시간대 제한, 중복 사용 불가 여부 안내</li><li>사용 후 즉시 내역 반영 및 알림 전송</li></ul><div class="button-row"><button class="btn-primary" type="button">쿠폰 사용하기</button><button class="btn-secondary" type="button">사용 조건 보기</button></div></section>
-          </div>
+        <section class="page-head">
+          <h1>쿠폰</h1>
         </section>
-        <footer class="footer"><div class="footer-grid"><div><h5>BAROGO USER</h5><p>쿠폰 관리 UX 샘플</p></div><div class="footer-links"><a href="user-events.html">이벤트 보기</a><a href="user-notifications.html">사용 알림</a></div><div><p>쿠폰 리스트와 사용 흐름을 모바일 우선으로 구성</p></div></div></footer>
+
+        <section class="content content-stack">
+          <section class="detail-hero coupon-hero">
+            <div class="detail-copy">
+              <p class="detail-eyebrow">쿠폰 지갑</p>
+              <h2>웰컴 드링크 1잔 쿠폰</h2>
+              <p class="detail-description">회원 가입 후 바로 지급되는 대표 쿠폰 예시입니다. 사용 가능 상태, 유효기간, 사용처, 주의사항이 한 화면에서 확인되도록 상세 구조를 채웠습니다.</p>
+              <div class="detail-meta-row">
+                <span class="meta-pill active">사용 가능</span>
+                <span class="meta-pill">2026.04.30까지</span>
+                <span class="meta-pill">문라이트 라운지 외 5곳</span>
+              </div>
+            </div>
+            <div class="detail-visual coupon-visual">
+              <div class="coupon-ticket">
+                <strong>WELCOME</strong>
+                <span>1 FREE DRINK</span>
+                <small>BAROGO MEMBER ONLY</small>
+              </div>
+            </div>
+          </section>
+
+          <section class="detail-grid two-column">
+            <article class="detail-card accent-card">
+              <h3>바로 사용하기</h3>
+              <p>매장 방문 시 이 화면을 제시하거나, 직원 확인용 QR/바코드를 열어 사용할 수 있습니다.</p>
+              <div class="button-row">
+                <button class="primary-action" type="button">쿠폰 사용하기</button>
+                <button class="secondary-action" type="button">직원 확인용 보기</button>
+              </div>
+            </article>
+            <article class="detail-card">
+              <h3>쿠폰 정보</h3>
+              <ul class="detail-list">
+                <li>혜택: 웰컴 드링크 1잔 무료 제공</li>
+                <li>유효기간: 2026.04.30 23:59까지</li>
+                <li>사용 채널: 앱 / 모바일 웹 제시 가능</li>
+                <li>상태: 미사용</li>
+              </ul>
+            </article>
+          </section>
+
+          <section class="detail-card">
+            <div class="section-title-row">
+              <h3>사용 가능 매장</h3>
+              <a href="user-bars.html">바 탐색에서 보기</a>
+            </div>
+            <div class="related-bar-list">
+              <article class="mini-bar-card">
+                <div class="mini-thumb">⛛</div>
+                <div>
+                  <p class="mini-location">서울 &gt; 삼성</p>
+                  <h4>The Blue Lounge</h4>
+                  <p class="mini-copy">웰컴 드링크 쿠폰 즉시 사용 가능</p>
+                </div>
+              </article>
+              <article class="mini-bar-card">
+                <div class="mini-thumb">⛛</div>
+                <div>
+                  <p class="mini-location">서울 &gt; 성수</p>
+                  <h4>The Jazz Lounge</h4>
+                  <p class="mini-copy">오늘의 재즈 이벤트와 중복 사용 가능</p>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <section class="detail-grid two-column">
+            <article class="detail-card">
+              <h3>사용 방법</h3>
+              <ol class="detail-steps">
+                <li>방문 전 쿠폰 상세 페이지에서 유효기간과 사용처를 확인합니다.</li>
+                <li>매장 입장 후 직원에게 QR 또는 쿠폰 화면을 제시합니다.</li>
+                <li>사용 완료 후 내역이 즉시 반영되고 알림이 발송됩니다.</li>
+              </ol>
+            </article>
+            <article class="detail-card">
+              <h3>유의사항</h3>
+              <ul class="detail-list">
+                <li>1인 1회만 사용 가능합니다.</li>
+                <li>일부 프로모션과 중복 적용되지 않을 수 있습니다.</li>
+                <li>매장 상황에 따라 제공 메뉴가 변경될 수 있습니다.</li>
+              </ul>
+            </article>
+          </section>
+
+          <section class="detail-card wallet-section">
+            <div class="section-title-row">
+              <h3>내 쿠폰 지갑</h3>
+              <a href="user-notifications.html">만료 알림 설정</a>
+            </div>
+            <div class="wallet-grid">
+              <article class="wallet-card active">
+                <strong>웰컴 드링크 1잔</strong>
+                <span>사용 가능</span>
+                <small>2026.04.30까지</small>
+              </article>
+              <article class="wallet-card expiring">
+                <strong>평일 10% 할인</strong>
+                <span>오늘 만료</span>
+                <small>강남 지역 제휴 바</small>
+              </article>
+              <article class="wallet-card used">
+                <strong>신규 가입 쿠폰</strong>
+                <span>사용 완료</span>
+                <small>지난 방문 내역 보관</small>
+              </article>
+            </div>
+          </section>
+        </section>
       </main>
     </div>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <div>
+          <div class="footer-brand">바로가자</div>
+          <p>Copyright © 2025, 회사명 Co., Ltd.</p>
+        </div>
+        <div class="footer-links">
+          <a href="user-support.html">이용약관</a>
+          <a href="user-support.html"><strong>개인정보처리방침</strong></a>
+        </div>
+        <div>
+          <p>주식회사 OOOOOOO</p>
+          <p>대표자명 OOO</p>
+          <p>대표번호 000-0000-0000</p>
+        </div>
+      </div>
+    </footer>
+
     <script src="user-shell.js"></script>
   </body>
 </html>
