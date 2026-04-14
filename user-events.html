@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>사용자 서비스 - 이벤트</title>
+    <title>사용자 서비스 - 기획전/이벤트</title>
     <link rel="stylesheet" href="user-theme.css" />
   </head>
   <body>
@@ -11,47 +11,66 @@
       <aside class="sidebar"></aside>
       <main class="main">
         <section class="page-head">
-          <h1>이벤트</h1>
+          <h1>기획전 · 이벤트 보기</h1>
         </section>
 
         <section class="content content-stack">
           <section class="detail-hero event-hero">
             <div class="detail-copy">
-              <p class="detail-eyebrow">기획전 / 이벤트</p>
-              <h2>이번 주 재즈 바 기획전</h2>
-              <p class="detail-description">서울 인기 재즈 바 12곳에서 웰컴 드링크와 전용 혜택을 받을 수 있는 한정 기획전입니다. 분위기 좋은 바를 찾는 사용자에게 가장 먼저 노출되는 대표 이벤트 화면입니다.</p>
+              <p class="detail-eyebrow">CURATED CAMPAIGN</p>
+              <h2>테마형 기획전과 시즌 이벤트를 목록과 상세로 자연스럽게 연결</h2>
+              <p class="detail-description">목록 화면에서 관심 가는 이벤트를 빠르게 탐색하고, 상세 화면에서는 참여 혜택, 기간, 조건, 연결된 바 정보를 한 번에 볼 수 있도록 구성했습니다.</p>
               <div class="detail-meta-row">
                 <span class="meta-pill active">진행 중</span>
                 <span class="meta-pill">2026.04.14 - 2026.04.30</span>
                 <span class="meta-pill">참여 바 12곳</span>
               </div>
               <div class="button-row">
-                <button class="primary-action" type="button">쿠폰 받기</button>
-                <button class="secondary-action" type="button">공유하기</button>
+                <button class="primary-action" type="button">이벤트 참여하기</button>
+                <button class="secondary-action" type="button">쿠폰 받기</button>
               </div>
             </div>
             <div class="detail-visual event-visual">
-              <div class="visual-badge">Jazz Night</div>
+              <div class="visual-badge">SPRING JAZZ WEEK</div>
               <strong>WELCOME DRINK</strong>
-              <span>분위기 좋은 밤을 위한 한 잔</span>
+              <span>참여 바 방문 시 웰컴 드링크 제공</span>
             </div>
+          </section>
+
+          <section class="feature-grid compact-grid">
+            <article class="feature-card">
+              <p class="section-kicker">EVENT LIST</p>
+              <h3>이번 주 라이브 바 기획전</h3>
+              <p>성수, 한남, 을지로의 라이브 바를 모아 소개하고 첫 방문 혜택을 제공합니다.</p>
+            </article>
+            <article class="feature-card">
+              <p class="section-kicker">SEASONAL</p>
+              <h3>봄 시즌 칵테일 페어</h3>
+              <p>시즌 한정 칵테일과 사진 인증 혜택을 함께 묶은 캠페인입니다.</p>
+            </article>
+            <article class="feature-card">
+              <p class="section-kicker">LOCAL PICK</p>
+              <h3>부산 야경 바 컬렉션</h3>
+              <p>지역 큐레이션과 프로모션을 한 번에 보여주는 테마형 이벤트 묶음입니다.</p>
+            </article>
           </section>
 
           <section class="detail-grid two-column">
             <article class="detail-card">
-              <h3>이벤트 안내</h3>
+              <h3>이벤트 상세 정보</h3>
               <ul class="detail-list">
-                <li>재즈 공연이 있는 제휴 바를 중심으로 노출됩니다.</li>
-                <li>이벤트 페이지에서 바로 참여 바 상세 화면으로 이동할 수 있습니다.</li>
-                <li>좋아요한 바가 포함되어 있으면 상단에 우선 추천됩니다.</li>
+                <li>이벤트 개요, 기간, 참여 방법, 유의사항 제공</li>
+                <li>참여 가능한 바 목록과 상세 페이지 연결</li>
+                <li>쿠폰 발급 및 알림 설정 CTA 배치</li>
+                <li>친구 공유와 저장 기능으로 재유입 유도</li>
               </ul>
             </article>
             <article class="detail-card">
               <h3>참여 조건</h3>
               <ul class="detail-list">
-                <li>회원 로그인 후 이벤트 쿠폰 받기를 누르면 자동 저장됩니다.</li>
-                <li>매장 방문 시 이벤트 쿠폰 또는 모바일 화면을 제시해야 합니다.</li>
-                <li>일부 매장은 시간대별 혜택이 달라질 수 있습니다.</li>
+                <li>로그인한 회원만 참여 가능</li>
+                <li>이벤트별 혜택 및 쿠폰 사용 조건 안내</li>
+                <li>매장 운영 상황에 따라 혜택이 일부 변경될 수 있음</li>
               </ul>
             </article>
           </section>
@@ -59,50 +78,34 @@
           <section class="detail-card">
             <div class="section-title-row">
               <h3>참여 바 리스트</h3>
-              <a href="user-bars.html">전체 바 탐색으로 보기</a>
+              <a href="user-bars.html">전체 바 큐레이션으로 이동</a>
             </div>
             <div class="related-bar-list">
               <article class="mini-bar-card">
-                <div class="mini-thumb">⛛</div>
-                <div>
-                  <p class="mini-location">서울 &gt; 삼성</p>
-                  <h4>The Blue Lounge</h4>
-                  <p class="mini-copy">재즈 라이브와 시그니처 칵테일이 강점인 대표 참여 바</p>
-                </div>
-              </article>
-              <article class="mini-bar-card">
-                <div class="mini-thumb">⛛</div>
+                <div class="mini-thumb">BAR</div>
                 <div>
                   <p class="mini-location">서울 &gt; 성수</p>
-                  <h4>The Jazz Lounge</h4>
-                  <p class="mini-copy">이벤트 기간 한정 웰컴 드링크 제공</p>
+                  <h4>The Blue Lounge</h4>
+                  <p class="mini-copy">재즈 라이브와 웰컴 드링크 혜택이 연결된 대표 참여 바</p>
                 </div>
               </article>
               <article class="mini-bar-card">
-                <div class="mini-thumb">⛛</div>
+                <div class="mini-thumb">BAR</div>
                 <div>
                   <p class="mini-location">서울 &gt; 한남</p>
-                  <h4>Craft &amp; Co.</h4>
-                  <p class="mini-copy">위스키와 재즈를 함께 즐길 수 있는 추천 바</p>
+                  <h4>Amber Room</h4>
+                  <p class="mini-copy">위스키 테이스팅 이벤트와 함께 운영되는 참여 매장</p>
+                </div>
+              </article>
+              <article class="mini-bar-card">
+                <div class="mini-thumb">BAR</div>
+                <div>
+                  <p class="mini-location">서울 &gt; 을지로</p>
+                  <h4>Night Assembly</h4>
+                  <p class="mini-copy">포토 인증 리워드와 연동되는 야간 이벤트 인기 바</p>
                 </div>
               </article>
             </div>
-          </section>
-
-          <section class="detail-grid two-column">
-            <article class="detail-card">
-              <h3>이용 시 유의사항</h3>
-              <ul class="detail-list">
-                <li>중복 할인은 매장 정책에 따라 제한될 수 있습니다.</li>
-                <li>당일 준비 수량 소진 시 혜택이 조기 종료될 수 있습니다.</li>
-                <li>미성년자는 참여 및 이용이 제한됩니다.</li>
-              </ul>
-            </article>
-            <article class="detail-card accent-card">
-              <h3>지금 참여하면</h3>
-              <p>웰컴 드링크 1잔, 재방문 할인 쿠폰, 좋아요 바 소식 우선 알림까지 함께 받을 수 있습니다.</p>
-              <button class="primary-action full" type="button">이벤트 혜택 받기</button>
-            </article>
           </section>
         </section>
       </main>
@@ -111,17 +114,15 @@
     <footer class="footer">
       <div class="footer-inner">
         <div>
-          <div class="footer-brand">바로가자</div>
-          <p>Copyright © 2025, 회사명 Co., Ltd.</p>
+          <div class="footer-brand">BAROGO</div>
+          <p>기획전/이벤트 UX 시안</p>
         </div>
         <div class="footer-links">
-          <a href="user-support.html">이용약관</a>
-          <a href="user-support.html"><strong>개인정보처리방침</strong></a>
+          <a href="user-coupons.html">쿠폰 관리</a>
+          <a href="user-notifications.html">알림 설정</a>
         </div>
         <div>
-          <p>주식회사 OOOOOOO</p>
-          <p>대표자명 OOO</p>
-          <p>대표번호 000-0000-0000</p>
+          <p>이벤트 목록, 상세, 참여 바 연결, 혜택 노출 포함</p>
         </div>
       </div>
     </footer>
