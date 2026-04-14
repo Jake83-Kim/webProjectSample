@@ -11,100 +11,186 @@
       <aside class="sidebar"></aside>
       <main class="main">
         <section class="page-head">
-          <h1>사용자 마이페이지</h1>
+          <h1>마이페이지</h1>
         </section>
 
         <section class="content content-stack">
-          <section class="hero-banner">
-            <p class="section-kicker">MY PAGE</p>
-            <h2>프로필 수정과 활동 관리가 분리되지 않도록, 사용자 데이터를 한 곳에서 정리하는 마이페이지</h2>
-            <p>닉네임, 소개, 관심 지역, 저장한 바, 후기 활동, 알림 연동 상태를 한 화면에서 확인하고 수정할 수 있도록 구성했습니다.</p>
+          <section class="my-top-card">
+            <div class="my-top-profile">
+              <div class="avatar-badge">KB</div>
+              <div>
+                <p class="section-kicker">MY BAROGO</p>
+                <h2>김바로</h2>
+                <p>성수, 한남 중심으로 재즈 바와 위스키 바를 즐겨 찾는 사용자</p>
+              </div>
+            </div>
+            <div class="my-top-stats">
+              <div>
+                <strong>22</strong>
+                <span>좋아요한 바</span>
+              </div>
+              <div>
+                <strong>14</strong>
+                <span>작성 후기</span>
+              </div>
+              <div>
+                <strong>3</strong>
+                <span>단골 가게</span>
+              </div>
+            </div>
           </section>
 
-          <div class="split-grid">
-            <section class="panel">
-              <div class="panel-head">
-                <div>
-                  <h3>프로필 수정</h3>
-                  <p>웹과 모바일 모두에서 쉽게 수정할 수 있는 기본 프로필 편집 영역입니다.</p>
-                </div>
-              </div>
-              <div class="field-grid">
-                <div class="field">
-                  <label>닉네임</label>
-                  <input type="text" value="김바로" />
-                </div>
-                <div class="field">
-                  <label>관심 지역</label>
-                  <input type="text" value="성수, 한남" />
-                </div>
-                <div class="field full">
-                  <label>자기소개</label>
-                  <textarea>재즈 바와 조용한 위스키 바를 좋아해요. 새로운 공간도 자주 탐색합니다.</textarea>
-                </div>
-              </div>
-              <div class="button-row">
-                <button class="btn-primary" type="button">프로필 저장</button>
-              </div>
-            </section>
+          <section class="mypage-layout">
+            <aside class="mypage-menu">
+              <a class="mypage-menu-item active" href="#profile-edit">프로필 관리</a>
+              <a class="mypage-menu-item" href="#activity-history">활동 내역</a>
+              <a class="mypage-menu-item" href="#saved-bars">저장한 바</a>
+              <a class="mypage-menu-item" href="#coupon-status">쿠폰 관리</a>
+              <a class="mypage-menu-item" href="#notification-settings">알림 설정</a>
+              <a class="mypage-menu-item" href="#account-settings">계정 설정</a>
+              <a class="mypage-menu-item" href="#support-links">고객지원 연결</a>
+            </aside>
 
-            <section class="panel">
-              <div class="panel-head">
-                <div>
-                  <h3>내 활동 요약</h3>
-                  <p>저장한 취향과 최근 활동을 기반으로 개인화 흐름을 유지합니다.</p>
+            <div class="mypage-content">
+              <section class="stack-panel" id="profile-edit">
+                <div class="section-title-row">
+                  <div>
+                    <p class="section-kicker">PROFILE</p>
+                    <h3>프로필 수정</h3>
+                  </div>
                 </div>
-              </div>
-              <ul class="info-list">
-                <li>
-                  <strong>단골 가게</strong>
-                  <div class="meta">
-                    <span>3곳 저장</span>
-                    <span>최근 방문 2곳</span>
+                <div class="field-grid">
+                  <div class="field">
+                    <label>닉네임</label>
+                    <input type="text" value="김바로" />
                   </div>
-                </li>
-                <li>
-                  <strong>작성 후기</strong>
-                  <div class="meta">
-                    <span>14건</span>
-                    <span>사진 포함 9건</span>
+                  <div class="field">
+                    <label>관심 지역</label>
+                    <input type="text" value="성수, 한남" />
                   </div>
-                </li>
-                <li>
-                  <strong>좋아요한 바</strong>
-                  <div class="meta">
-                    <span>22곳</span>
-                    <span class="badge">알림 연동</span>
+                  <div class="field full">
+                    <label>자기소개</label>
+                    <textarea>재즈 바와 조용한 위스키 바를 좋아해요. 새로운 공간도 자주 탐색합니다.</textarea>
                   </div>
-                </li>
-              </ul>
-            </section>
-          </div>
+                </div>
+                <div class="button-row">
+                  <button class="btn-primary" type="button">저장하기</button>
+                </div>
+              </section>
 
-          <section class="detail-grid two-column">
-            <article class="detail-card">
-              <div class="section-title-row">
-                <h3>저장한 바와 활동</h3>
-                <a href="user-bars.html">바 큐레이션 보기</a>
-              </div>
-              <ul class="detail-list">
-                <li>좋아요한 바 목록</li>
-                <li>단골 지정 매장 관리</li>
-                <li>작성 후기 및 수정 내역</li>
-                <li>이벤트 참여와 쿠폰 사용 이력</li>
-              </ul>
-            </article>
-            <article class="detail-card accent-card">
-              <div class="section-title-row">
-                <h3>계정 설정 연결</h3>
-                <a href="user-account.html">계정 기능으로 이동</a>
-              </div>
-              <ul class="detail-list">
-                <li>프로필 수정 후 계정 보안 설정과 연결</li>
-                <li>소셜 연동 상태와 알림 수신 여부 표시</li>
-                <li>로그아웃, 탈퇴, 약관 열람 동선 준비</li>
-              </ul>
-            </article>
+              <section class="stack-panel" id="activity-history">
+                <div class="section-title-row">
+                  <div>
+                    <p class="section-kicker">ACTIVITY</p>
+                    <h3>활동 내역</h3>
+                  </div>
+                </div>
+                <div class="feed-list">
+                  <div class="feed-item static">
+                    <div>
+                      <strong>Amber Room 후기 작성</strong>
+                      <p>평점 4.8 · 사진 3장 첨부</p>
+                    </div>
+                    <span class="status-badge">어제</span>
+                  </div>
+                  <div class="feed-item static">
+                    <div>
+                      <strong>The Blue Lounge 단골 저장</strong>
+                      <p>공연 알림 수신 설정 완료</p>
+                    </div>
+                    <span class="status-badge">2시간 전</span>
+                  </div>
+                </div>
+              </section>
+
+              <section class="stack-panel" id="saved-bars">
+                <div class="section-title-row">
+                  <div>
+                    <p class="section-kicker">SAVED BARS</p>
+                    <h3>저장한 바</h3>
+                  </div>
+                  <a href="user-bars.html">전체 보기</a>
+                </div>
+                <div class="related-bar-list">
+                  <article class="mini-bar-card">
+                    <div class="mini-thumb">BAR</div>
+                    <div>
+                      <p class="mini-location">서울 &gt; 성수</p>
+                      <h4>The Blue Lounge</h4>
+                      <p class="mini-copy">좋아요, 단골 저장, 공연 알림 수신 중</p>
+                    </div>
+                  </article>
+                  <article class="mini-bar-card">
+                    <div class="mini-thumb">BAR</div>
+                    <div>
+                      <p class="mini-location">서울 &gt; 한남</p>
+                      <h4>Amber Room</h4>
+                      <p class="mini-copy">최근 후기 작성, 위스키 신메뉴 알림 활성화</p>
+                    </div>
+                  </article>
+                </div>
+              </section>
+
+              <section class="stack-panel" id="coupon-status">
+                <div class="section-title-row">
+                  <div>
+                    <p class="section-kicker">COUPON</p>
+                    <h3>쿠폰 관리</h3>
+                  </div>
+                  <a href="user-coupons.html">쿠폰함 이동</a>
+                </div>
+                <div class="meta-row">
+                  <span>사용 가능 2장</span>
+                  <span>만료 임박 1장</span>
+                  <span>사용 완료 3장</span>
+                </div>
+              </section>
+
+              <section class="stack-panel" id="notification-settings">
+                <div class="section-title-row">
+                  <div>
+                    <p class="section-kicker">NOTIFICATION</p>
+                    <h3>알림 설정</h3>
+                  </div>
+                  <a href="user-notifications.html">알림 센터</a>
+                </div>
+                <div class="action-chip-list">
+                  <span class="action-chip">쿠폰 만료 알림</span>
+                  <span class="action-chip">단골 바 소식</span>
+                  <span class="action-chip">이벤트 시작 알림</span>
+                </div>
+              </section>
+
+              <section class="stack-panel" id="account-settings">
+                <div class="section-title-row">
+                  <div>
+                    <p class="section-kicker">ACCOUNT</p>
+                    <h3>계정 설정</h3>
+                  </div>
+                  <a href="user-account.html">계정 관리</a>
+                </div>
+                <ul class="detail-list">
+                  <li>소셜 로그인 연동 상태 확인</li>
+                  <li>비밀번호 변경 및 보안 설정</li>
+                  <li>로그아웃 및 탈퇴 흐름</li>
+                </ul>
+              </section>
+
+              <section class="stack-panel" id="support-links">
+                <div class="section-title-row">
+                  <div>
+                    <p class="section-kicker">SUPPORT</p>
+                    <h3>고객지원 연결</h3>
+                  </div>
+                  <a href="user-support.html">고객지원 바로가기</a>
+                </div>
+                <ul class="detail-list">
+                  <li>FAQ 바로 보기</li>
+                  <li>1:1 문의 내역 확인</li>
+                  <li>약관 및 정책 열람</li>
+                </ul>
+              </section>
+            </div>
           </section>
         </section>
 
@@ -119,7 +205,7 @@
               <a href="user-notifications.html">알림 설정</a>
             </div>
             <div>
-              <p>프로필 수정, 활동 요약, 저장 정보 관리 흐름 포함</p>
+              <p>서브 메뉴 기반 실제 앱형 마이페이지 구조 포함</p>
             </div>
           </div>
         </footer>

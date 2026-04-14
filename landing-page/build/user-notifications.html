@@ -11,92 +11,113 @@
       <aside class="sidebar"></aside>
       <main class="main">
         <section class="page-head">
-          <h1>알림 기능</h1>
+          <h1>알림 센터</h1>
         </section>
 
         <section class="content content-stack">
-          <section class="hero-banner">
-            <p class="section-kicker">NOTIFICATION CENTER</p>
-            <h2>좋아요한 바 소식, 쿠폰 만료, 이벤트 오픈, 고객지원 답변을 한곳에서 확인하는 알림 센터</h2>
-            <p>재방문 유도와 중요 정보 전달을 동시에 달성할 수 있도록 알림 목록과 채널 설정을 분리해 구성했습니다.</p>
+          <section class="app-hero-card">
+            <div class="app-hero-copy">
+              <p class="section-kicker">NOTIFICATION CENTER</p>
+              <h2>단골 바 소식, 쿠폰 만료, 이벤트 오픈, 고객지원 답변을 실제 앱 알림함처럼 관리하는 화면</h2>
+              <p>최신순과 중요도 기준으로 정리된 알림 목록을 보고, 필요한 알림만 남기도록 설정할 수 있게 구성했습니다.</p>
+              <div class="quick-chip-row">
+                <span class="quick-chip active">전체</span>
+                <span class="quick-chip">혜택</span>
+                <span class="quick-chip">단골 바</span>
+                <span class="quick-chip">고객지원</span>
+              </div>
+            </div>
+            <div class="hero-summary-card">
+              <h3>알림 현황</h3>
+              <ul class="summary-list">
+                <li>읽지 않음 3건</li>
+                <li>쿠폰 만료 1건</li>
+                <li>단골 바 소식 2건</li>
+              </ul>
+            </div>
           </section>
 
-          <div class="split-grid">
-            <section class="panel">
-              <div class="panel-head">
+          <div class="home-dual-grid">
+            <section class="stack-panel">
+              <div class="section-title-row">
                 <div>
-                  <h3>알림 목록</h3>
-                  <p>최신순과 중요도 기준으로 정리된 사용자 알림 예시입니다.</p>
+                  <p class="section-kicker">RECENT NOTIFICATIONS</p>
+                  <h3>최근 알림</h3>
                 </div>
               </div>
-              <ul class="info-list">
-                <li>
-                  <strong>The Blue Lounge에서 새로운 재즈 공연 일정을 등록했어요.</strong>
-                  <div class="meta">
-                    <span>10분 전</span>
-                    <span class="badge success">바 소식</span>
+              <div class="feed-list">
+                <div class="feed-item static">
+                  <div>
+                    <strong>The Blue Lounge에서 새로운 재즈 공연 일정을 등록했어요.</strong>
+                    <p>좋아요한 바의 최신 공연 소식</p>
                   </div>
-                </li>
-                <li>
-                  <strong>평일 10% 할인 쿠폰이 오늘 만료됩니다.</strong>
-                  <div class="meta">
-                    <span>1시간 전</span>
-                    <span class="badge warning">쿠폰 만료</span>
+                  <span class="status-badge active">10분 전</span>
+                </div>
+                <div class="feed-item static">
+                  <div>
+                    <strong>평일 10% 할인 쿠폰이 오늘 만료됩니다.</strong>
+                    <p>사용 가능한 매장을 확인하고 바로 사용해보세요.</p>
                   </div>
-                </li>
-                <li>
-                  <strong>1:1 문의에 운영팀 답변이 도착했습니다.</strong>
-                  <div class="meta">
-                    <span>오늘 오전</span>
-                    <span class="badge">고객지원</span>
+                  <span class="status-badge warn">1시간 전</span>
+                </div>
+                <div class="feed-item static">
+                  <div>
+                    <strong>1:1 문의에 운영팀 답변이 도착했습니다.</strong>
+                    <p>문의 내역에서 상세 답변을 확인할 수 있습니다.</p>
                   </div>
-                </li>
-              </ul>
+                  <span class="status-badge">오늘 오전</span>
+                </div>
+              </div>
             </section>
 
-            <section class="panel">
-              <div class="panel-head">
+            <section class="stack-panel">
+              <div class="section-title-row">
                 <div>
+                  <p class="section-kicker">SETTINGS</p>
                   <h3>알림 설정</h3>
-                  <p>주제별, 채널별로 알림 강도를 조정할 수 있는 구조입니다.</p>
                 </div>
               </div>
-              <ul class="plain-list">
-                <li>푸시 알림: 이벤트 시작, 쿠폰 만료, 단골 바 소식</li>
-                <li>이메일 알림: 계정 보안, 공지사항, 1:1 문의 답변</li>
-                <li>앱 내 알림함: 전체 활동 이력과 읽음 상태 관리</li>
-              </ul>
+              <div class="feed-list">
+                <div class="feed-item static">
+                  <div>
+                    <strong>푸시 알림</strong>
+                    <p>이벤트 시작, 쿠폰 만료, 단골 바 소식</p>
+                  </div>
+                  <span class="status-badge active">ON</span>
+                </div>
+                <div class="feed-item static">
+                  <div>
+                    <strong>이메일 알림</strong>
+                    <p>계정 보안, 공지사항, 1:1 문의 답변</p>
+                  </div>
+                  <span class="status-badge">ON</span>
+                </div>
+                <div class="feed-item static">
+                  <div>
+                    <strong>마케팅 알림</strong>
+                    <p>새로운 추천 바와 시즌 기획전 안내</p>
+                  </div>
+                  <span class="status-badge muted">OFF</span>
+                </div>
+              </div>
               <div class="button-row">
                 <button class="btn-primary" type="button">알림 설정 저장</button>
               </div>
             </section>
           </div>
 
-          <section class="detail-grid two-column">
-            <article class="detail-card">
-              <div class="section-title-row">
-                <h3>주요 알림 카테고리</h3>
-                <a href="user-coupons.html">쿠폰과 연결</a>
-              </div>
-              <div class="action-chip-list">
-                <span class="action-chip">쿠폰 만료</span>
-                <span class="action-chip">이벤트 오픈</span>
-                <span class="action-chip">단골 바 소식</span>
-                <span class="action-chip">후기 반응</span>
-                <span class="action-chip">1:1 문의 답변</span>
-              </div>
-            </article>
-            <article class="detail-card accent-card">
-              <div class="section-title-row">
-                <h3>운영 관점</h3>
-                <a href="user-support.html">고객지원 보기</a>
-              </div>
-              <ul class="detail-list">
-                <li>재방문을 유도하는 혜택성 알림과 필수 정보 알림을 구분합니다.</li>
-                <li>읽음 처리, 만료 전 리마인드, 문의 답변 연계를 고려한 구조입니다.</li>
-                <li>웹과 모바일에서 같은 메시지 체계로 유지보수하기 쉽습니다.</li>
-              </ul>
-            </article>
+          <section class="detail-card accent-card">
+            <div class="section-title-row">
+              <h3>주요 알림 카테고리</h3>
+              <a href="user-support.html">고객지원 보기</a>
+            </div>
+            <div class="action-chip-list">
+              <span class="action-chip">쿠폰 만료</span>
+              <span class="action-chip">이벤트 오픈</span>
+              <span class="action-chip">단골 바 소식</span>
+              <span class="action-chip">후기 반응</span>
+              <span class="action-chip">1:1 문의 답변</span>
+            </div>
           </section>
         </section>
 
@@ -111,7 +132,7 @@
               <a href="user-support.html">문의 알림</a>
             </div>
             <div>
-              <p>푸시/이메일/앱 내 알림과 중요도 설계 흐름 포함</p>
+              <p>앱형 알림함, 채널 설정, 중요도 중심 구조 포함</p>
             </div>
           </div>
         </footer>

@@ -11,97 +11,151 @@
       <aside class="sidebar"></aside>
       <main class="main">
         <section class="page-head">
-          <h1>쿠폰 관리 기능</h1>
+          <h1>쿠폰함</h1>
         </section>
 
         <section class="content content-stack">
-          <section class="detail-hero coupon-hero">
-            <div class="detail-copy">
-              <p class="detail-eyebrow">COUPON WALLET</p>
-              <h2>발급받은 쿠폰을 모아 보고, 사용 가능한 바에서 바로 쓸 수 있는 쿠폰 관리 화면</h2>
-              <p class="detail-description">보유 쿠폰 목록, 사용 조건, 유효 기간, 사용 가능한 매장을 명확히 보여주고 모바일 현장 사용 흐름까지 이어지도록 구성했습니다.</p>
-              <div class="detail-meta-row">
-                <span class="meta-pill active">사용 가능</span>
-                <span class="meta-pill">만료 3일 전</span>
-                <span class="meta-pill">적용 매장 5곳</span>
+          <section class="app-hero-card">
+            <div class="app-hero-copy">
+              <p class="section-kicker">COUPON WALLET</p>
+              <h2>실제 앱처럼 쿠폰 상태를 먼저 보고, 바로 사용할 수 있는 지갑형 쿠폰 화면</h2>
+              <p>사용 가능, 만료 임박, 사용 완료 상태가 한눈에 보이고, 어떤 매장에서 쓸 수 있는지 바로 연결되도록 바꿨습니다.</p>
+              <div class="quick-chip-row">
+                <span class="quick-chip active">전체 6장</span>
+                <span class="quick-chip">사용 가능 2장</span>
+                <span class="quick-chip">만료 임박 1장</span>
+                <span class="quick-chip">사용 완료 3장</span>
               </div>
             </div>
-            <div class="detail-visual coupon-visual">
-              <div class="coupon-ticket">
-                <strong>WELCOME</strong>
-                <span>1 FREE DRINK</span>
-                <small>BAROGO MEMBER ONLY</small>
+            <div class="hero-summary-card">
+              <h3>오늘의 쿠폰 요약</h3>
+              <ul class="summary-list">
+                <li>바로 사용 가능 2장</li>
+                <li>오늘 만료 1장</li>
+                <li>이벤트 연동 쿠폰 3장</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="coupon-wallet-board">
+            <article class="wallet-hero-card active">
+              <div>
+                <p class="wallet-label">추천 사용</p>
+                <h3>웰컴 드링크 1잔</h3>
+                <p>성수 · 한남 지정 바 5곳에서 즉시 사용 가능</p>
               </div>
+              <div class="wallet-hero-meta">
+                <span class="status-badge active">사용 가능</span>
+                <strong>04.30까지</strong>
+              </div>
+            </article>
+            <article class="wallet-mini-card warn">
+              <strong>평일 10% 할인</strong>
+              <p>오늘 만료</p>
+            </article>
+            <article class="wallet-mini-card">
+              <strong>시그니처 칵테일</strong>
+              <p>사용 완료</p>
+            </article>
+          </section>
+
+          <section class="home-section">
+            <div class="section-title-row">
+              <div>
+                <p class="section-kicker">COUPON LIST</p>
+                <h3>쿠폰 목록</h3>
+              </div>
+            </div>
+            <div class="coupon-list">
+              <article class="coupon-list-card active">
+                <div class="coupon-list-main">
+                  <div>
+                    <div class="title-with-badge">
+                      <h4>웰컴 드링크 1잔</h4>
+                      <span class="status-badge active">사용 가능</span>
+                    </div>
+                    <p>봄 재즈 위크 참여 바 방문 시 웰컴 드링크 1잔 무료</p>
+                    <div class="meta-row">
+                      <span>2026.04.30까지</span>
+                      <span>지정 매장 5곳</span>
+                    </div>
+                  </div>
+                  <button class="primary-action" type="button">사용하기</button>
+                </div>
+              </article>
+
+              <article class="coupon-list-card warn">
+                <div class="coupon-list-main">
+                  <div>
+                    <div class="title-with-badge">
+                      <h4>평일 10% 할인</h4>
+                      <span class="status-badge warn">오늘 만료</span>
+                    </div>
+                    <p>성수/한남 일부 매장에서 1인 1회 사용 가능</p>
+                    <div class="meta-row">
+                      <span>오늘 23:59까지</span>
+                      <span>중복 사용 불가</span>
+                    </div>
+                  </div>
+                  <button class="secondary-action" type="button">조건 보기</button>
+                </div>
+              </article>
+
+              <article class="coupon-list-card used">
+                <div class="coupon-list-main">
+                  <div>
+                    <div class="title-with-badge">
+                      <h4>시그니처 칵테일 무료</h4>
+                      <span class="status-badge muted">사용 완료</span>
+                    </div>
+                    <p>The Blue Lounge 방문 시 사용한 쿠폰</p>
+                    <div class="meta-row">
+                      <span>2026.04.10 사용</span>
+                      <span>방문 이력 저장됨</span>
+                    </div>
+                  </div>
+                  <button class="secondary-action" type="button">이력 보기</button>
+                </div>
+              </article>
             </div>
           </section>
 
           <section class="detail-grid two-column">
-            <article class="detail-card accent-card">
-              <h3>즉시 사용</h3>
-              <p>매장 방문 시 QR 또는 바코드를 제시해 바로 사용할 수 있도록 모바일 사용 액션을 전면에 배치했습니다.</p>
-              <div class="button-row">
-                <button class="primary-action" type="button">쿠폰 사용하기</button>
-                <button class="secondary-action" type="button">사용 조건 보기</button>
+            <article class="detail-card">
+              <div class="section-title-row">
+                <h3>사용 가능한 매장</h3>
+                <a href="user-bars.html">전체 매장 보기</a>
+              </div>
+              <div class="related-bar-list">
+                <article class="mini-bar-card">
+                  <div class="mini-thumb">BAR</div>
+                  <div>
+                    <p class="mini-location">서울 &gt; 성수</p>
+                    <h4>The Blue Lounge</h4>
+                    <p class="mini-copy">웰컴 드링크, 평일 할인 쿠폰 사용 가능</p>
+                  </div>
+                </article>
+                <article class="mini-bar-card">
+                  <div class="mini-thumb">BAR</div>
+                  <div>
+                    <p class="mini-location">서울 &gt; 한남</p>
+                    <h4>Amber Room</h4>
+                    <p class="mini-copy">웰컴 드링크 쿠폰 및 이벤트 연동 혜택 제공</p>
+                  </div>
+                </article>
               </div>
             </article>
-            <article class="detail-card">
-              <h3>쿠폰 정보</h3>
-              <ul class="detail-list">
-                <li>혜택: 웰컴 드링크 1잔 무료 제공</li>
-                <li>유효 기간: 2026.04.30 23:59까지</li>
-                <li>사용 채널: 웹/모바일 쿠폰 제시 가능</li>
-                <li>상태: 미사용</li>
-              </ul>
+            <article class="detail-card accent-card">
+              <div class="section-title-row">
+                <h3>쿠폰 관리 액션</h3>
+              </div>
+              <div class="action-chip-list">
+                <span class="action-chip">즉시 사용</span>
+                <span class="action-chip">만료 알림</span>
+                <span class="action-chip">사용 조건 확인</span>
+                <span class="action-chip">이벤트로 이동</span>
+              </div>
             </article>
-          </section>
-
-          <section class="detail-card wallet-section">
-            <div class="section-title-row">
-              <h3>내 쿠폰 목록</h3>
-              <a href="user-notifications.html">만료 알림 설정</a>
-            </div>
-            <div class="wallet-grid">
-              <article class="wallet-card active">
-                <strong>웰컴 드링크 1잔</strong>
-                <span>사용 가능</span>
-                <small>2026.04.30까지</small>
-              </article>
-              <article class="wallet-card expiring">
-                <strong>평일 10% 할인</strong>
-                <span>오늘 만료</span>
-                <small>성수/한남 지정 바</small>
-              </article>
-              <article class="wallet-card used">
-                <strong>시그니처 칵테일 쿠폰</strong>
-                <span>사용 완료</span>
-                <small>최근 방문 내역과 연동</small>
-              </article>
-            </div>
-          </section>
-
-          <section class="detail-card">
-            <div class="section-title-row">
-              <h3>사용 가능한 매장</h3>
-              <a href="user-bars.html">바 큐레이션에서 보기</a>
-            </div>
-            <div class="related-bar-list">
-              <article class="mini-bar-card">
-                <div class="mini-thumb">BAR</div>
-                <div>
-                  <p class="mini-location">서울 &gt; 성수</p>
-                  <h4>The Blue Lounge</h4>
-                  <p class="mini-copy">웰컴 드링크 쿠폰 즉시 사용 가능</p>
-                </div>
-              </article>
-              <article class="mini-bar-card">
-                <div class="mini-thumb">BAR</div>
-                <div>
-                  <p class="mini-location">서울 &gt; 한남</p>
-                  <h4>Amber Room</h4>
-                  <p class="mini-copy">평일 할인 쿠폰과 중복 가능한 프로모션 운영</p>
-                </div>
-              </article>
-            </div>
           </section>
         </section>
       </main>
@@ -118,7 +172,7 @@
           <a href="user-notifications.html">알림 설정</a>
         </div>
         <div>
-          <p>쿠폰 목록, 상태, 사용 흐름, 만료 알림 구조 포함</p>
+          <p>목록형 쿠폰함과 사용 흐름 포함</p>
         </div>
       </div>
     </footer>
