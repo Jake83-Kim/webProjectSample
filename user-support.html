@@ -11,44 +11,71 @@
       <aside class="sidebar"></aside>
       <main class="main">
         <section class="page-head">
-          <h1>플랫폼 고객지원 CS</h1>
+          <h1>고객지원</h1>
         </section>
 
         <section class="content content-stack">
-          <section class="hero-banner">
-            <p class="section-kicker">CUSTOMER SUPPORT</p>
-            <h2>FAQ, 공지사항, 1:1 문의, 약관 열람까지 고객지원 기능을 한 흐름으로 정리한 지원 허브</h2>
-            <p>사용자가 스스로 해결할 수 있는 정보와 직접 문의해야 하는 상황을 분리해, FAQ와 공지사항으로 먼저 유도하고 필요한 경우 1:1 문의로 자연스럽게 이어지도록 구성했습니다.</p>
+          <section class="app-hero-card">
+            <div class="app-hero-copy">
+              <p class="section-kicker">CUSTOMER SUPPORT</p>
+              <h2>FAQ, 공지사항, 1:1 문의, 약관 열람이 자연스럽게 이어지는 앱형 고객지원 허브</h2>
+              <p>사용자가 스스로 해결할 수 있는 정보와 직접 문의해야 하는 상황을 분리해, FAQ와 공지사항으로 먼저 유도하고 필요한 경우 1:1 문의로 전환되도록 구성했습니다.</p>
+              <div class="quick-chip-row">
+                <span class="quick-chip active">FAQ</span>
+                <span class="quick-chip">공지사항</span>
+                <span class="quick-chip">1:1 문의</span>
+                <span class="quick-chip">약관</span>
+              </div>
+            </div>
+            <div class="hero-summary-card">
+              <h3>지원 메뉴</h3>
+              <ul class="summary-list">
+                <li>FAQ</li>
+                <li>공지사항</li>
+                <li>1:1 문의</li>
+                <li>약관 및 정책</li>
+              </ul>
+            </div>
           </section>
 
-          <div class="split-grid">
-            <section class="panel">
-              <div class="panel-head">
+          <div class="home-dual-grid">
+            <section class="stack-panel">
+              <div class="section-title-row">
                 <div>
-                  <h3>FAQ · 공지사항</h3>
-                  <p>반복 문의를 줄이기 위한 셀프 해결 영역입니다.</p>
+                  <p class="section-kicker">FAQ / NOTICE</p>
+                  <h3>자주 묻는 질문과 공지사항</h3>
                 </div>
               </div>
-              <div class="faq-item">
-                <button class="faq-question" type="button">소셜 로그인이 되지 않을 때는 어떻게 하나요?<span>+</span></button>
-                <div class="faq-answer">앱 권한과 계정 연동 상태를 확인하고, 동일 계정으로 재시도할 수 있도록 안내합니다.</div>
+              <div class="feed-list">
+                <div class="feed-item static">
+                  <div>
+                    <strong>소셜 로그인이 되지 않을 때는 어떻게 하나요?</strong>
+                    <p>앱 권한과 계정 연동 상태를 확인한 뒤 다시 시도하도록 안내합니다.</p>
+                  </div>
+                  <span class="status-badge">FAQ</span>
+                </div>
+                <div class="feed-item static">
+                  <div>
+                    <strong>쿠폰은 어디에서 사용하나요?</strong>
+                    <p>쿠폰 상세 페이지 또는 마이페이지 쿠폰함에서 사용 가능한 매장을 확인할 수 있습니다.</p>
+                  </div>
+                  <span class="status-badge">FAQ</span>
+                </div>
+                <div class="feed-item static">
+                  <div>
+                    <strong>4월 20일 결제 시스템 점검 예정</strong>
+                    <p>일부 결제 기능이 일시적으로 제한될 수 있습니다.</p>
+                  </div>
+                  <span class="status-badge warn">공지</span>
+                </div>
               </div>
-              <div class="faq-item">
-                <button class="faq-question" type="button">쿠폰은 어디에서 사용하나요?<span>+</span></button>
-                <div class="faq-answer">쿠폰 상세 페이지 또는 마이페이지 쿠폰함에서 사용 가능한 매장을 확인한 뒤 현장에서 제시하면 됩니다.</div>
-              </div>
-              <ul class="plain-list" style="margin-top: 18px;">
-                <li>공지사항: 4월 20일 결제 시스템 점검 예정</li>
-                <li>공지사항: 신규 지역 추천 바 데이터 업데이트</li>
-                <li>공지사항: 개인정보처리방침 개정 안내</li>
-              </ul>
             </section>
 
-            <section class="panel">
-              <div class="panel-head">
+            <section class="stack-panel">
+              <div class="section-title-row">
                 <div>
-                  <h3>1:1 문의 접수</h3>
-                  <p>개별 이슈를 직접 접수할 수 있는 문의 폼과 처리 흐름입니다.</p>
+                  <p class="section-kicker">1:1 INQUIRY</p>
+                  <h3>문의 접수</h3>
                 </div>
               </div>
               <div class="field-grid">
@@ -68,8 +95,8 @@
             </section>
           </div>
 
-          <section class="detail-grid two-column">
-            <article class="detail-card">
+          <div class="home-dual-grid">
+            <section class="detail-card">
               <div class="section-title-row">
                 <h3>약관 및 정책 열람</h3>
                 <a href="user-account.html">계정과 연결</a>
@@ -80,8 +107,9 @@
                 <li>마케팅 수신 동의</li>
                 <li>위치기반 서비스 이용약관</li>
               </ul>
-            </article>
-            <article class="detail-card accent-card">
+            </section>
+
+            <section class="detail-card accent-card">
               <div class="section-title-row">
                 <h3>운영 응답 체계</h3>
                 <a href="user-notifications.html">알림 연계</a>
@@ -91,8 +119,8 @@
                 <li>FAQ 조회 후에도 해결되지 않으면 1:1 문의로 전환</li>
                 <li>공지사항과 정책 변경은 중요 알림과 연결</li>
               </ul>
-            </article>
-          </section>
+            </section>
+          </div>
         </section>
 
         <footer class="footer">
