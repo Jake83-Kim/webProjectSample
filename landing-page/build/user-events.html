@@ -18,21 +18,21 @@
           <section class="app-hero-card">
             <div class="app-hero-copy">
               <p class="section-kicker">EVENT LIST</p>
-              <h2>진행 중인 이벤트를 상태별로 보고, 관심 이벤트를 선택해 상세로 들어가는 이벤트 목록 화면</h2>
-              <p>이 화면은 비교와 선택에 집중하고, 혜택 조건과 참여 바, 유의사항은 상세 페이지에서 보여주도록 정리했습니다.</p>
+              <h2>진행 중인 기획전과 이벤트를 비교하고, 원하는 상세 화면으로 들어가는 목록 화면</h2>
+              <p>기획전 상세와 이벤트 상세가 서로 다른 정보 구조를 가지도록 분리해, 목록에서는 상태와 기간만 비교할 수 있게 정리했습니다.</p>
               <div class="quick-chip-row">
                 <span class="quick-chip active">전체</span>
-                <span class="quick-chip">진행 중</span>
-                <span class="quick-chip">오늘 시작</span>
+                <span class="quick-chip">기획전</span>
+                <span class="quick-chip">이벤트</span>
                 <span class="quick-chip">종료 임박</span>
               </div>
             </div>
             <div class="hero-summary-card">
               <h3>이벤트 현황</h3>
               <ul class="summary-list">
-                <li>진행 중 8건</li>
+                <li>기획전 3건</li>
+                <li>이벤트 5건</li>
                 <li>오늘 시작 2건</li>
-                <li>쿠폰 연동 5건</li>
               </ul>
             </div>
           </section>
@@ -47,57 +47,38 @@
             <div class="event-list">
               <article class="event-list-card">
                 <div class="event-list-main">
-                  <div class="event-thumb emerald">JAZZ</div>
+                  <div class="event-thumb emerald">PROMO</div>
                   <div>
                     <div class="title-with-badge">
-                      <h4>봄 재즈 위크</h4>
+                      <h4>도심 속 재즈 바 기획전</h4>
                       <span class="status-badge active">진행 중</span>
                     </div>
-                    <p>성수 · 한남 라이브 바 중심 기획전</p>
+                    <p>성수 · 한남 재즈 바 7곳을 큐레이션한 월간 기획전</p>
                     <div class="meta-row">
-                      <span>2026.04.14 - 04.30</span>
-                      <span>참여 바 12곳</span>
-                      <span>웰컴 드링크</span>
-                    </div>
-                  </div>
-                </div>
-                <a class="inline-link" href="user-event-detail.html">상세 보기</a>
-              </article>
-
-              <article class="event-list-card">
-                <div class="event-list-main">
-                  <div class="event-thumb coral">PHOTO</div>
-                  <div>
-                    <div class="title-with-badge">
-                      <h4>사진 인증 칵테일 페어</h4>
-                      <span class="status-badge">오늘 시작</span>
-                    </div>
-                    <p>사진 후기 작성 시 다음 방문 할인 쿠폰 지급</p>
-                    <div class="meta-row">
-                      <span>전국</span>
-                      <span>쿠폰 지급형</span>
-                    </div>
-                  </div>
-                </div>
-                <a class="inline-link" href="user-event-detail.html">상세 보기</a>
-              </article>
-
-              <article class="event-list-card">
-                <div class="event-list-main">
-                  <div class="event-thumb amber">LOCAL</div>
-                  <div>
-                    <div class="title-with-badge">
-                      <h4>부산 야경 바 컬렉션</h4>
-                      <span class="status-badge warn">곧 종료</span>
-                    </div>
-                    <p>해운대 · 광안리 루프탑/오션뷰 추천전</p>
-                    <div class="meta-row">
-                      <span>부산</span>
+                      <span>2026.04.01 - 04.30</span>
                       <span>참여 바 7곳</span>
                     </div>
                   </div>
                 </div>
-                <a class="inline-link" href="user-event-detail.html">상세 보기</a>
+                <a class="inline-link" href="user-promotion-detail.html">기획전 상세 보기</a>
+              </article>
+
+              <article class="event-list-card">
+                <div class="event-list-main">
+                  <div class="event-thumb coral">EVENT</div>
+                  <div>
+                    <div class="title-with-badge">
+                      <h4>봄 밤의 재즈 페스티벌</h4>
+                      <span class="status-badge">오늘 시작</span>
+                    </div>
+                    <p>참여 바 방문 시 칵테일/할인 혜택을 제공하는 이벤트</p>
+                    <div class="meta-row">
+                      <span>2026.04.01 - 04.30</span>
+                      <span>쿠폰 지급형</span>
+                    </div>
+                  </div>
+                </div>
+                <a class="inline-link" href="user-event-detail.html">이벤트 상세 보기</a>
               </article>
             </div>
           </section>
@@ -116,7 +97,7 @@
           <a href="user-notifications.html">알림 설정</a>
         </div>
         <div>
-          <p>목록 탐색 후 상세 페이지로 이동하는 구조</p>
+          <p>기획전 상세와 이벤트 상세를 나눠 진입하는 구조</p>
         </div>
       </div>
     </footer>

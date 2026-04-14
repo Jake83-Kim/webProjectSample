@@ -6,113 +6,69 @@
     <title>사용자 서비스 - 쿠폰함</title>
     <link rel="stylesheet" href="user-theme.css" />
   </head>
-  <body>
+  <body class="concept-page concept-light coupon-list-page">
     <div class="user-shell">
       <aside class="sidebar"></aside>
       <main class="main">
-        <section class="page-head">
-          <h1>쿠폰함</h1>
+        <section class="page-head concept-head light-head">
+          <h1>쿠폰</h1>
         </section>
 
-        <section class="content content-stack">
-          <section class="app-hero-card">
-            <div class="app-hero-copy">
-              <p class="section-kicker">COUPON LIST</p>
-              <h2>보유 쿠폰을 상태별로 확인하고, 필요한 쿠폰을 선택해 상세/사용 화면으로 들어가는 쿠폰 목록 화면</h2>
-              <p>이 화면은 쿠폰 상태 비교와 선택에 집중하고, 사용 조건, 적용 매장, 사용 방법은 상세 페이지에서 확인하도록 역할을 나눴습니다.</p>
-              <div class="quick-chip-row">
-                <span class="quick-chip active">전체 6장</span>
-                <span class="quick-chip">사용 가능 2장</span>
-                <span class="quick-chip">만료 임박 1장</span>
-                <span class="quick-chip">사용 완료 3장</span>
-              </div>
-            </div>
-            <div class="hero-summary-card">
-              <h3>쿠폰 현황</h3>
-              <ul class="summary-list">
-                <li>바로 사용 가능 2장</li>
-                <li>오늘 만료 1장</li>
-                <li>이벤트 연동 쿠폰 3장</li>
-              </ul>
+        <section class="content concept-light-layout coupon-list-layout">
+          <section class="coupon-hero-banner">
+            <div>
+              <h2>Big Benefits</h2>
+              <p>지금 바로 사용 가능한 이달의 특별 쿠폰</p>
             </div>
           </section>
 
-          <section class="home-section">
-            <div class="section-title-row">
-              <div>
-                <p class="section-kicker">COUPON CARDS</p>
-                <h3>쿠폰 목록</h3>
+          <section class="coupon-ticket-grid">
+            <article class="concept-coupon-ticket claimable">
+              <div class="coupon-ticket-meta">
+                <span class="ticket-label black">전지점</span>
+                <span class="ticket-dday">D-15</span>
               </div>
-            </div>
-            <div class="coupon-list">
-              <article class="coupon-list-card active">
-                <div class="coupon-list-main">
-                  <div>
-                    <div class="title-with-badge">
-                      <h4>웰컴 드링크 1잔</h4>
-                      <span class="status-badge active">사용 가능</span>
-                    </div>
-                    <p>봄 재즈 위크 참여 바 방문 시 사용 가능</p>
-                    <div class="meta-row">
-                      <span>2026.04.30까지</span>
-                      <span>지정 매장 5곳</span>
-                    </div>
-                  </div>
-                  <a class="inline-link" href="user-coupon-detail.html">상세 보기</a>
+              <div class="coupon-ticket-body">
+                <div>
+                  <strong>10,000<span>원 할인</span></strong>
+                  <p>3만원 이상 결제 시</p>
                 </div>
-              </article>
+                <a class="coupon-ticket-action" href="user-coupon-detail.html">쿠폰 받기</a>
+              </div>
+            </article>
 
-              <article class="coupon-list-card warn">
-                <div class="coupon-list-main">
-                  <div>
-                    <div class="title-with-badge">
-                      <h4>평일 10% 할인</h4>
-                      <span class="status-badge warn">오늘 만료</span>
-                    </div>
-                    <p>성수/한남 일부 매장에서 사용 가능</p>
-                    <div class="meta-row">
-                      <span>오늘 23:59까지</span>
-                      <span>중복 사용 불가</span>
-                    </div>
-                  </div>
-                  <a class="inline-link" href="user-coupon-detail.html">상세 보기</a>
+            <article class="concept-coupon-ticket owned">
+              <div class="coupon-ticket-meta">
+                <span class="ticket-label black">일부지점</span>
+                <span class="ticket-dday">D-15</span>
+              </div>
+              <div class="coupon-ticket-body compact">
+                <div>
+                  <strong>웰컴 칵테일 1잔</strong>
+                  <p>지점마다 다를 수 있습니다.</p>
                 </div>
-              </article>
-
-              <article class="coupon-list-card used">
-                <div class="coupon-list-main">
-                  <div>
-                    <div class="title-with-badge">
-                      <h4>시그니처 칵테일 무료</h4>
-                      <span class="status-badge muted">사용 완료</span>
-                    </div>
-                    <p>The Blue Lounge 방문 시 사용한 쿠폰</p>
-                    <div class="meta-row">
-                      <span>2026.04.10 사용</span>
-                      <span>방문 이력 저장</span>
-                    </div>
-                  </div>
-                  <a class="inline-link" href="user-coupon-detail.html">상세 보기</a>
-                </div>
-              </article>
-            </div>
+                <span class="owned-mark">보유중</span>
+              </div>
+            </article>
           </section>
         </section>
       </main>
     </div>
 
-    <footer class="footer">
+    <footer class="footer light-footer">
       <div class="footer-inner">
         <div>
-          <div class="footer-brand">BAROGO</div>
-          <p>쿠폰 목록 화면</p>
+          <div class="footer-brand">바로가자</div>
+          <p>Copyright © 2025, 회사명 Co., Ltd.</p>
         </div>
         <div class="footer-links">
-          <a href="user-events.html">이벤트 보기</a>
-          <a href="user-notifications.html">알림 설정</a>
+          <a href="user-support.html">이용약관</a>
+          <a href="user-support.html"><strong>개인정보처리방침</strong></a>
         </div>
         <div>
-          <p>목록 탐색 후 상세 페이지로 이동하는 구조</p>
+          <p>주식회사 OOOOOOOO</p>
+          <p>대표자명 OOO</p>
+          <p>대표번호 000-0000-0000</p>
         </div>
       </div>
     </footer>

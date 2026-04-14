@@ -6,67 +6,99 @@
     <title>사용자 서비스 - 바 상세</title>
     <link rel="stylesheet" href="user-theme.css" />
   </head>
-  <body>
+  <body class="concept-page concept-dark detail-bar-page">
     <div class="user-shell">
       <aside class="sidebar"></aside>
       <main class="main">
-        <section class="page-head">
+        <section class="page-head concept-head">
           <h1>바 상세</h1>
         </section>
-        <section class="content content-stack">
-          <section class="detail-showcase">
-            <div class="detail-cover emerald">THE BLUE LOUNGE</div>
-            <div class="stack-panel">
-              <p class="section-kicker">BAR DETAIL</p>
-              <h2 class="detail-title">The Blue Lounge</h2>
-              <p class="detail-copy">성수의 대표 재즈 바. 라이브 공연, 시그니처 칵테일, 차분한 좌석 구성이 강점인 공간입니다.</p>
-              <div class="meta-row">
-                <span>서울 · 성수</span>
-                <span>★ 4.9</span>
-                <span>리뷰 128</span>
-                <span>단골 246</span>
+
+        <section class="content concept-detail-layout">
+          <section class="bar-hero-grid">
+            <div class="gallery-panel">
+              <div class="hero-gallery-main">MAIN PHOTO</div>
+              <div class="gallery-thumb-row">
+                <button class="gallery-thumb active" type="button">1</button>
+                <button class="gallery-thumb" type="button">2</button>
+                <button class="gallery-thumb" type="button">3</button>
+                <button class="gallery-thumb" type="button">4</button>
+                <button class="gallery-thumb" type="button">5</button>
               </div>
-              <div class="action-chip-list">
-                <span class="action-chip">좋아요</span>
-                <span class="action-chip">단골가게 지정</span>
-                <span class="action-chip">바 소식 구독</span>
+            </div>
+
+            <div class="detail-summary-panel">
+              <p class="detail-breadcrumb">서울 &gt; 성수 &gt; 재즈/위스키 바</p>
+              <div class="title-rating-row">
+                <span class="rating-inline">★ 4.8</span>
+                <span class="review-inline">리뷰 128</span>
               </div>
+              <h2>The Blue Lounge</h2>
+              <p class="lead-copy">
+                첨당의 숨은 보석 같은 공간. 은은한 싱글몰트 위스키와 전문 바텐더의 창작 칵테일을 즐길 수 있습니다.
+                조용하고 품격 있는 대화를 원하는 분들을 위한 공간입니다.
+              </p>
+              <div class="tag-row">
+                <span>#데이트</span>
+                <span>#한남바</span>
+                <span>#비즈니스</span>
+                <span>#Wine</span>
+                <span>#Jazz</span>
+              </div>
+
+              <dl class="detail-meta-list">
+                <div>
+                  <dt>운영전략</dt>
+                  <dd>예약 중심 운영, 1인 바 좌석, 라이브 재즈 데이 운영</dd>
+                </div>
+                <div>
+                  <dt>영업시간</dt>
+                  <dd>18:00 - 02:00 / 금요일 03:00 마감</dd>
+                </div>
+                <div>
+                  <dt class="accent-danger">매주 일요일 휴무</dt>
+                  <dd>공연 스케줄에 따라 임시 변경 가능</dd>
+                </div>
+              </dl>
+
+              <a class="concept-cta-button" href="user-support.html">방문 예약 문의하기</a>
             </div>
           </section>
 
-          <div class="home-dual-grid">
-            <section class="stack-panel">
-              <p class="section-kicker">INFO</p>
-              <h3>매장 정보</h3>
-              <ul class="detail-list">
-                <li>운영 시간: 18:00 - 02:00</li>
-                <li>대표 메뉴: 블루 시그니처 마티니, 위스키 플라이트</li>
-                <li>분위기: 재즈, 데이트, 조용한 대화</li>
-                <li>편의 정보: 예약 가능, 바 테이블, 공연일 운영</li>
-              </ul>
-            </section>
-            <section class="stack-panel">
-              <p class="section-kicker">BAR NEWS</p>
-              <h3>바 소식</h3>
-              <div class="feed-list">
-                <div class="feed-item static"><div><strong>금요일 라이브 재즈 공연 공지</strong><p>이번 주 공연 라인업 공개</p></div><span class="status-badge">NEW</span></div>
-                <div class="feed-item static"><div><strong>봄 재즈 위크 참여</strong><p>웰컴 드링크 쿠폰 사용 가능</p></div><span class="status-badge active">이벤트</span></div>
-              </div>
-            </section>
-          </div>
+          <section class="concept-tab-strip">
+            <a class="active" href="#review-section">이용후기(128)</a>
+            <a href="#news-section">바 소식</a>
+          </section>
 
-          <section class="stack-panel">
-            <p class="section-kicker">REVIEWS</p>
-            <h3>이용 후기</h3>
-            <div class="feed-list">
-              <div class="feed-item static"><div><strong>분위기가 정말 좋아요</strong><p>재즈 공연 퀄리티가 높고 칵테일 밸런스가 좋았어요.</p></div><span class="status-badge">4.9</span></div>
-              <div class="feed-item static"><div><strong>성수 데이트 코스로 추천</strong><p>좌석 간격이 좋아서 대화하기 편했습니다.</p></div><span class="status-badge">4.8</span></div>
-            </div>
+          <section class="wide-media-panel" id="review-section">REVIEW FEATURE IMAGE</section>
+          <section class="wide-media-panel secondary" id="news-section">BAR NEWS FEATURE IMAGE</section>
+
+          <section class="map-block">
+            <p class="section-label">Location Map</p>
+            <div class="map-panel">지도 서비스 연동 영역 (Naver Map)</div>
           </section>
         </section>
       </main>
     </div>
-    <footer class="footer"><div class="footer-inner"><div><div class="footer-brand">BAROGO</div><p>바 상세 화면</p></div><div class="footer-links"><a href="user-bars.html">바 목록</a><a href="user-profile.html">마이페이지</a></div><div><p>목록에서 진입한 후 상세 정보를 확인하는 구조</p></div></div></footer>
+
+    <footer class="footer concept-footer">
+      <div class="footer-inner">
+        <div>
+          <div class="footer-brand">바로가자</div>
+          <p>Copyright © 2025, 회사명 Co., Ltd.</p>
+        </div>
+        <div class="footer-links">
+          <a href="user-support.html">이용약관</a>
+          <a href="user-support.html"><strong>개인정보처리방침</strong></a>
+        </div>
+        <div>
+          <p>주식회사 OOOOOOOO</p>
+          <p>대표자명 OOO</p>
+          <p>대표번호 000-0000-0000</p>
+        </div>
+      </div>
+    </footer>
+
     <script src="user-shell.js"></script>
   </body>
 </html>
