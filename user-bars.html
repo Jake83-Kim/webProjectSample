@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>사용자 서비스 - 바 큐레이션</title>
+    <title>사용자 서비스 - 바 탐색</title>
     <link rel="stylesheet" href="user-theme.css" />
   </head>
   <body>
@@ -11,15 +11,21 @@
     <div class="user-shell">
       <aside class="sidebar"></aside>
       <main class="main">
-        <header class="topbar"><div class="topbar-left"><button class="sidebar-toggle" type="button" data-sidebar-toggle>☰</button><div><h1 class="page-title">바 큐레이션 기능</h1><p class="page-copy">검색, 상세, 후기, 단골, 좋아요, 바 소식까지 사용자 탐색 흐름을 구성했습니다.</p></div></div><div class="topbar-right"><div class="status-pill"><span class="status-dot"></span><span>취향 기반 추천 활성화</span></div><div class="user-pill"><a href="/webProjectSample/">로그아웃</a></div></div></header>
+        <header class="topbar"><div class="topbar-left"><button class="sidebar-toggle" type="button" aria-label="메뉴 열기" data-sidebar-toggle>☰</button><div><h1 class="page-title">취향에 맞는 바를 찾아보세요</h1><p class="page-copy">검색 결과가 아니라 앱 안에서 탐색하는 느낌으로 추천과 필터를 보여줍니다.</p></div></div><div class="topbar-right"><div class="status-pill"><span class="status-dot"></span><span>재즈 · 루프탑 · 칵테일</span></div><div class="user-pill"><a href="/webProjectSample/">로그아웃</a></div></div></header>
         <section class="content">
-          <section class="hero-banner"><p class="section-kicker">BAR CURATION</p><h2>바를 찾고 비교하고, 좋아요와 단골로 이어지는 탐색 흐름을 모바일 친화적으로 정리했습니다.</h2><p>사용자는 지역, 분위기, 음악, 가격대 필터를 통해 바를 찾고, 상세 페이지에서 후기와 바 소식을 함께 확인한 뒤 단골가게로 저장할 수 있습니다.</p></section>
+          <section class="hero-banner"><p class="section-kicker">Discover Bars</p><h2>지역, 분위기, 음악, 가격대를 고르면 오늘의 무드에 맞는 바가 바로 추천됩니다.</h2><p>바 큐레이션 페이지도 관리자 목록이 아니라 실제 사용자가 스와이프하며 탐색하는 앱 화면처럼 보이도록 구성했습니다.</p></section>
+          <section class="panel"><div class="panel-head"><div><h3>필터 칩</h3><p>사용자가 가장 많이 쓰는 탐색 조건을 상단에 노출합니다.</p></div></div><div class="chip-list"><span class="badge">강남</span><span class="badge">재즈</span><span class="badge">칵테일</span><span class="badge">루프탑</span><span class="badge">2차 추천</span><span class="badge">조용한 분위기</span></div></section>
+          <section class="feature-grid">
+            <article><h3>문라이트 라운지</h3><p>재즈 라이브와 시그니처 칵테일로 인기 높은 강남 추천 바</p><ul class="plain-list"><li>평점 4.8 · 리뷰 320개</li><li>좋아요 1,203 · 저장 412</li><li>오늘 공연 시작 21:00</li></ul><div class="button-row"><button class="btn-primary" type="button">상세 보기</button><button class="btn-ghost" type="button">좋아요</button></div></article>
+            <article><h3>어반 몰트 바</h3><p>차분한 조도와 위스키 셀렉션이 강점인 한남동 바</p><ul class="plain-list"><li>위스키 플라이트 인기</li><li>단골 지정 사용자 다수</li><li>주중 전용 쿠폰 제공</li></ul><div class="button-row"><button class="btn-primary" type="button">상세 보기</button><button class="btn-ghost" type="button">단골 저장</button></div></article>
+            <article><h3>레트로 바이닐 펍</h3><p>음악 취향 기반 추천에 자주 노출되는 성수 감성 바</p><ul class="plain-list"><li>오늘 DJ 나잇 진행</li><li>좋아요 사용자 대상 알림 발송</li><li>후기 사진 비율 높음</li></ul><div class="button-row"><button class="btn-primary" type="button">상세 보기</button><button class="btn-ghost" type="button">후기 보기</button></div></article>
+          </section>
           <div class="split-grid">
-            <section class="panel"><div class="panel-head"><div><h3>바 목록 / 검색</h3><p>조건별 검색과 추천 카드를 함께 제공합니다.</p></div></div><div class="chip-list"><span class="badge">강남</span><span class="badge">재즈</span><span class="badge">칵테일</span><span class="badge">루프탑</span></div><ul class="info-list" style="margin-top: 16px;"><li><strong>문라이트 라운지</strong><div class="meta"><span>강남역 도보 4분</span><span>평점 4.8</span><span class="badge success">좋아요 1,203</span></div></li><li><strong>어반 몰트 바</strong><div class="meta"><span>한남동</span><span>위스키 전문</span><span class="badge">단골 320</span></div></li><li><strong>레트로 바이닐 펍</strong><div class="meta"><span>성수</span><span>라이브 DJ</span><span class="badge warning">이벤트 진행 중</span></div></li></ul></section>
-            <section class="panel"><div class="panel-head"><div><h3>상세 / 후기 / 바 소식</h3><p>상세 화면에서 행동 전환이 이어지도록 배치합니다.</p></div></div><ul class="plain-list"><li>상세 정보: 운영시간, 대표 메뉴, 분위기 태그, 위치 지도, 사진 갤러리</li><li>이용후기 작성: 별점, 사진 첨부, 재방문 의사, 추천 포인트 입력</li><li>단골가게 지정 / 좋아요: 홈 상단과 알림 개인화에 반영</li><li>바 소식 보기: 공연 일정, 신메뉴, 예약 이벤트, 휴무 공지 노출</li></ul><div class="button-row"><button class="btn-primary" type="button">상세 보기</button><button class="btn-secondary" type="button">후기 작성</button><button class="btn-secondary" type="button">단골 지정</button></div></section>
+            <section class="panel"><div class="panel-head"><div><h3>상세 화면에 들어가는 정보</h3><p>앱에서 실제로 자주 확인하는 요소를 중심으로 배치합니다.</p></div></div><ul class="plain-list"><li>매장 사진, 분위기 태그, 시그니처 메뉴</li><li>운영시간, 위치, 혼잡도, 예약 가능 여부</li><li>좋아요, 단골 저장, 공유, 길찾기 버튼</li></ul></section>
+            <section class="panel"><div class="panel-head"><div><h3>사용자 행동 흐름</h3><p>탐색에서 끝나지 않게 다음 행동을 자연스럽게 유도합니다.</p></div></div><ul class="plain-list"><li>후기 작성으로 만족 경험 공유</li><li>좋아요 / 단골 저장으로 재방문 연결</li><li>바 소식 구독으로 알림과 이벤트 연동</li></ul></section>
           </div>
         </section>
-        <footer class="footer"><div class="footer-grid"><div><h5>BAROGO USER</h5><p>바 탐색 및 큐레이션 샘플</p></div><div class="footer-links"><a href="user-events.html">이벤트 보기</a><a href="user-coupons.html">쿠폰 보기</a></div><div><p>좋아요와 단골 데이터로 개인화 추천 강화</p></div></div></footer>
+        <footer class="footer"><div class="footer-grid"><div><h5>BAROGO USER</h5><p>사용자 탐색형 바 큐레이션</p></div><div class="footer-links"><a href="user-events.html">이벤트 보기</a><a href="user-coupons.html">쿠폰 보기</a></div><div><p>목록형 관리 화면이 아니라 추천 카드형 소비자 탐색 화면으로 재구성했습니다.</p></div></div></footer>
       </main>
     </div>
     <script src="user-shell.js"></script>
