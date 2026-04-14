@@ -72,65 +72,79 @@
   }
 
   const sidebarCopyByPage = {
-    'user.html': '사용자 서비스 첫 화면입니다.<br />회원, 바 탐색, 쿠폰, 알림, 고객지원까지 한 흐름으로 이동할 수 있습니다.',
-    'user-account.html': '회원가입, 로그인, 계정 찾기, 소셜 로그인을 한 화면 구조로 정리했습니다.',
-    'user-bars.html': '바 검색, 상세 보기, 후기, 단골, 좋아요, 바 소식 탐색 흐름을 보여줍니다.',
-    'user-events.html': '기획전과 이벤트 목록, 상세 정보, 참여 유도를 한 곳에서 확인합니다.',
-    'user-coupons.html': '보유 쿠폰 확인과 사용 가능 상태를 모바일 친화 흐름으로 배치했습니다.',
-    'user-profile.html': '마이페이지에서 프로필 수정, 활동 관리, 선호 정보 정리를 다룹니다.',
-    'user-notifications.html': '주요 활동 알림과 개인화 알림 설정을 같은 대시보드 흐름으로 구성했습니다.',
-    'user-support.html': 'FAQ, 공지사항, 1:1 문의, 약관 열람까지 고객지원 기능을 연결했습니다.',
+    'user.html': '오늘 가볼 만한 바, 쿠폰, 이벤트를 앱 홈처럼 한 번에 모아봤습니다.',
+    'user-account.html': '회원가입과 로그인도 앱 첫 진입처럼 가볍고 친숙하게 보이도록 정리했습니다.',
+    'user-bars.html': '탐색, 후기, 좋아요, 단골 저장까지 사용자의 선택 흐름이 자연스럽게 이어집니다.',
+    'user-events.html': '기획전과 이벤트는 배너와 카드 중심으로 소비자 서비스처럼 보여줍니다.',
+    'user-coupons.html': '쿠폰 지갑과 사용 버튼이 눈에 바로 들어오도록 모바일 중심으로 배치했습니다.',
+    'user-profile.html': '프로필과 취향 정보가 개인화 추천으로 연결되는 마이페이지 흐름입니다.',
+    'user-notifications.html': '좋아요한 바 소식과 쿠폰 만료 알림을 피드처럼 가볍게 확인할 수 있습니다.',
+    'user-support.html': '고객지원도 운영 화면이 아니라 실제 서비스 도움말 센터처럼 보이게 구성했습니다.',
   };
 
-  const menuSections = [
+  const menuGroups = [
     {
-      title: '서비스 홈',
+      title: 'Quick Access',
       items: [
-        { href: 'user.html', label: '사용자 대시보드', meta: 'Home' },
-        { href: 'user-account.html', label: '회원 계정 기능', meta: 'Auth' },
+        { href: 'user.html', label: '홈', meta: 'Home' },
+        { href: 'user-bars.html', label: '탐색', meta: 'Bars' },
+        { href: 'user-events.html', label: '이벤트', meta: 'Event' },
+        { href: 'user-coupons.html', label: '쿠폰', meta: 'Coupon' },
       ],
     },
     {
-      title: '탐색과 혜택',
+      title: 'My Space',
       items: [
-        { href: 'user-bars.html', label: '바 큐레이션', meta: 'Bars' },
-        { href: 'user-events.html', label: '기획전 / 이벤트', meta: 'Event' },
-        { href: 'user-coupons.html', label: '쿠폰 관리', meta: 'Coupon' },
-      ],
-    },
-    {
-      title: '개인화와 지원',
-      items: [
-        { href: 'user-profile.html', label: '마이페이지', meta: 'My' },
+        { href: 'user-account.html', label: '계정', meta: 'Auth' },
+        { href: 'user-profile.html', label: '마이', meta: 'My' },
         { href: 'user-notifications.html', label: '알림', meta: 'Alert' },
-        { href: 'user-support.html', label: '고객지원 CS', meta: 'Help' },
+        { href: 'user-support.html', label: '도움', meta: 'Help' },
       ],
     },
   ];
 
   if (sidebar) {
-    const sectionsMarkup = menuSections
-      .map((section) => {
-        const itemsMarkup = section.items
+    const sectionsMarkup = menuGroups
+      .map((group) => {
+        const itemsMarkup = group.items
           .map((item) => {
             const activeClass = item.href === currentPage ? ' active' : '';
-            return `<a class="menu-link${activeClass}" href="${item.href}"><span>${item.label}</span><small>${item.meta}</small></a>`;
+            return `
+              <a class="menu-link${activeClass}" href="${item.href}">
+                <span>${item.label}</span>
+                <small>${item.meta}</small>
+              </a>
+            `;
           })
           .join('');
 
-        return `<section class="sidebar-section"><h2 class="sidebar-title">${section.title}</h2><nav class="menu-list">${itemsMarkup}</nav></section>`;
+        return `
+          <section class="sidebar-section">
+            <h2 class="sidebar-title">${group.title}</h2>
+            <nav class="menu-list">${itemsMarkup}</nav>
+          </section>
+        `;
       })
       .join('');
 
     sidebar.innerHTML = `
-      <div class="brand">
-        <div class="brand-mark">BAROGO USER</div>
-        <div class="brand-copy">${sidebarCopyByPage[currentPage] || sidebarCopyByPage['user.html']}</div>
+      <div class="sidebar-header">
+        <div class="brand">
+          <div class="brand-mark">BAROGO</div>
+          <div class="brand-copy">${sidebarCopyByPage[currentPage] || sidebarCopyByPage['user.html']}</div>
+        </div>
+        <div class="profile-chip">
+          <div class="profile-avatar">HK</div>
+          <div>
+            <strong>홍길동 님</strong>
+            <p>오늘도 새로운 바를 찾아볼까요?</p>
+          </div>
+        </div>
       </div>
       ${sectionsMarkup}
       <div class="sidebar-footer">
-        <p>사용자 여정 중심으로 기능을 나눠서 웹과 모바일 앱 모두에 어울리는 정보 구조로 정리했습니다.</p>
-        <a href="user.html">사용자 홈으로 이동</a>
+        <p>지금 사용 가능한 쿠폰 4장과 좋아요한 바의 새 소식 2건이 도착했어요.</p>
+        <a href="user-coupons.html">혜택 바로 보기</a>
       </div>
     `;
   }
