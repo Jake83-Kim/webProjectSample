@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>사용자 서비스 - 쿠폰 관리</title>
+    <title>사용자 서비스 - 쿠폰함</title>
     <link rel="stylesheet" href="user-theme.css" />
   </head>
   <body>
@@ -17,9 +17,9 @@
         <section class="content content-stack">
           <section class="app-hero-card">
             <div class="app-hero-copy">
-              <p class="section-kicker">COUPON WALLET</p>
-              <h2>실제 앱처럼 쿠폰 상태를 먼저 보고, 바로 사용할 수 있는 지갑형 쿠폰 화면</h2>
-              <p>사용 가능, 만료 임박, 사용 완료 상태가 한눈에 보이고, 어떤 매장에서 쓸 수 있는지 바로 연결되도록 바꿨습니다.</p>
+              <p class="section-kicker">COUPON LIST</p>
+              <h2>보유 쿠폰을 상태별로 확인하고, 필요한 쿠폰을 선택해 상세/사용 화면으로 들어가는 쿠폰 목록 화면</h2>
+              <p>이 화면은 쿠폰 상태 비교와 선택에 집중하고, 사용 조건, 적용 매장, 사용 방법은 상세 페이지에서 확인하도록 역할을 나눴습니다.</p>
               <div class="quick-chip-row">
                 <span class="quick-chip active">전체 6장</span>
                 <span class="quick-chip">사용 가능 2장</span>
@@ -28,7 +28,7 @@
               </div>
             </div>
             <div class="hero-summary-card">
-              <h3>오늘의 쿠폰 요약</h3>
+              <h3>쿠폰 현황</h3>
               <ul class="summary-list">
                 <li>바로 사용 가능 2장</li>
                 <li>오늘 만료 1장</li>
@@ -37,32 +37,10 @@
             </div>
           </section>
 
-          <section class="coupon-wallet-board">
-            <article class="wallet-hero-card active">
-              <div>
-                <p class="wallet-label">추천 사용</p>
-                <h3>웰컴 드링크 1잔</h3>
-                <p>성수 · 한남 지정 바 5곳에서 즉시 사용 가능</p>
-              </div>
-              <div class="wallet-hero-meta">
-                <span class="status-badge active">사용 가능</span>
-                <strong>04.30까지</strong>
-              </div>
-            </article>
-            <article class="wallet-mini-card warn">
-              <strong>평일 10% 할인</strong>
-              <p>오늘 만료</p>
-            </article>
-            <article class="wallet-mini-card">
-              <strong>시그니처 칵테일</strong>
-              <p>사용 완료</p>
-            </article>
-          </section>
-
           <section class="home-section">
             <div class="section-title-row">
               <div>
-                <p class="section-kicker">COUPON LIST</p>
+                <p class="section-kicker">COUPON CARDS</p>
                 <h3>쿠폰 목록</h3>
               </div>
             </div>
@@ -74,13 +52,13 @@
                       <h4>웰컴 드링크 1잔</h4>
                       <span class="status-badge active">사용 가능</span>
                     </div>
-                    <p>봄 재즈 위크 참여 바 방문 시 웰컴 드링크 1잔 무료</p>
+                    <p>봄 재즈 위크 참여 바 방문 시 사용 가능</p>
                     <div class="meta-row">
                       <span>2026.04.30까지</span>
                       <span>지정 매장 5곳</span>
                     </div>
                   </div>
-                  <button class="primary-action" type="button">사용하기</button>
+                  <a class="inline-link" href="user-coupon-detail.html">상세 보기</a>
                 </div>
               </article>
 
@@ -91,13 +69,13 @@
                       <h4>평일 10% 할인</h4>
                       <span class="status-badge warn">오늘 만료</span>
                     </div>
-                    <p>성수/한남 일부 매장에서 1인 1회 사용 가능</p>
+                    <p>성수/한남 일부 매장에서 사용 가능</p>
                     <div class="meta-row">
                       <span>오늘 23:59까지</span>
                       <span>중복 사용 불가</span>
                     </div>
                   </div>
-                  <button class="secondary-action" type="button">조건 보기</button>
+                  <a class="inline-link" href="user-coupon-detail.html">상세 보기</a>
                 </div>
               </article>
 
@@ -111,51 +89,13 @@
                     <p>The Blue Lounge 방문 시 사용한 쿠폰</p>
                     <div class="meta-row">
                       <span>2026.04.10 사용</span>
-                      <span>방문 이력 저장됨</span>
+                      <span>방문 이력 저장</span>
                     </div>
                   </div>
-                  <button class="secondary-action" type="button">이력 보기</button>
+                  <a class="inline-link" href="user-coupon-detail.html">상세 보기</a>
                 </div>
               </article>
             </div>
-          </section>
-
-          <section class="detail-grid two-column">
-            <article class="detail-card">
-              <div class="section-title-row">
-                <h3>사용 가능한 매장</h3>
-                <a href="user-bars.html">전체 매장 보기</a>
-              </div>
-              <div class="related-bar-list">
-                <article class="mini-bar-card">
-                  <div class="mini-thumb">BAR</div>
-                  <div>
-                    <p class="mini-location">서울 &gt; 성수</p>
-                    <h4>The Blue Lounge</h4>
-                    <p class="mini-copy">웰컴 드링크, 평일 할인 쿠폰 사용 가능</p>
-                  </div>
-                </article>
-                <article class="mini-bar-card">
-                  <div class="mini-thumb">BAR</div>
-                  <div>
-                    <p class="mini-location">서울 &gt; 한남</p>
-                    <h4>Amber Room</h4>
-                    <p class="mini-copy">웰컴 드링크 쿠폰 및 이벤트 연동 혜택 제공</p>
-                  </div>
-                </article>
-              </div>
-            </article>
-            <article class="detail-card accent-card">
-              <div class="section-title-row">
-                <h3>쿠폰 관리 액션</h3>
-              </div>
-              <div class="action-chip-list">
-                <span class="action-chip">즉시 사용</span>
-                <span class="action-chip">만료 알림</span>
-                <span class="action-chip">사용 조건 확인</span>
-                <span class="action-chip">이벤트로 이동</span>
-              </div>
-            </article>
           </section>
         </section>
       </main>
@@ -165,14 +105,14 @@
       <div class="footer-inner">
         <div>
           <div class="footer-brand">BAROGO</div>
-          <p>쿠폰 관리 UX 시안</p>
+          <p>쿠폰 목록 화면</p>
         </div>
         <div class="footer-links">
           <a href="user-events.html">이벤트 보기</a>
           <a href="user-notifications.html">알림 설정</a>
         </div>
         <div>
-          <p>목록형 쿠폰함과 사용 흐름 포함</p>
+          <p>목록 탐색 후 상세 페이지로 이동하는 구조</p>
         </div>
       </div>
     </footer>
