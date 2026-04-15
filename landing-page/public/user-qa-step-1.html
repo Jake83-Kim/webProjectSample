@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>질의/응답 - 1단계</title>
+    <link rel="stylesheet" href="user-theme.css" />
+  </head>
+  <body>
+    <div class="user-shell">
+      <aside class="sidebar"></aside>
+      <main class="main">
+        <section class="page-head">
+          <h1>질의/응답 작성</h1>
+        </section>
+        <section class="content content-stack qa-flow-page">
+          <section class="qa-flow-header">
+            <div>
+              <p class="section-kicker">STEP 01 OF 05</p>
+              <h2>어떤 문의인지 먼저 선택해주세요.</h2>
+            </div>
+            <div class="qa-progress"><span style="width: 20%"></span></div>
+          </section>
+          <section class="qa-form-card">
+            <div class="qa-chip-grid">
+              <label class="qa-option-card"><input type="radio" name="question-type" checked /><span>예약 / 방문 문의</span><small>예약 가능 시간, 대기, 좌석 문의</small></label>
+              <label class="qa-option-card"><input type="radio" name="question-type" /><span>쿠폰 / 결제 문의</span><small>쿠폰 사용, 할인, 결제 오류 문의</small></label>
+              <label class="qa-option-card"><input type="radio" name="question-type" /><span>이벤트 / 기획전 문의</span><small>참여 조건, 기간, 혜택 문의</small></label>
+              <label class="qa-option-card"><input type="radio" name="question-type" /><span>후기 / 매장 경험 의견</span><small>실제 방문 경험과 관련한 의견 전달</small></label>
+            </div>
+            <div class="field-grid">
+              <div>
+                <label for="subject">문의 제목</label>
+                <input id="subject" type="text" placeholder="예: 쿠폰 사용 가능 매장을 알고 싶어요" />
+              </div>
+              <div>
+                <label for="urgency">긴급도</label>
+                <select id="urgency">
+                  <option>일반 문의</option>
+                  <option>빠른 확인 요청</option>
+                  <option>방문 직전 문의</option>
+                </select>
+              </div>
+            </div>
+            <div class="qa-nav-row">
+              <a class="btn-ghost" href="user-qa.html">이전</a>
+              <a class="btn-primary" href="user-qa-step-2.html">다음</a>
+            </div>
+          </section>
+        </section>
+      </main>
+    </div>
+    <footer class="footer"><div class="footer-inner"><div><div class="footer-brand">바로가자</div><p>Copyright © 2025, 회사명 Co., Ltd.</p></div><div class="footer-links"><a href="user-support.html">이용약관</a><a href="user-support.html"><strong>개인정보처리방침</strong></a></div><div><p>주식회사 OOOOOOOO</p><p>대표자명 OOO</p><p>대표번호 000-0000-0000</p></div></div></footer>
+    <script src="user-shell.js"></script>
+  </body>
+</html>
