@@ -14,31 +14,64 @@ async function sha256(value) {
     .join('');
 }
 
-const entryCards = [
+const entryGroups = [
   {
-    label: 'OWNER SYSTEM',
-    title: '사장님 운영 시스템',
+    label: 'BAROGO FLOWS',
+    title: '기존 바로고 시안',
     description:
-      '매장 운영, 쿠폰 관리, 리뷰 확인, 공지와 CS 대응까지 사장님용 관리 화면으로 바로 진입합니다.',
-    href: `${process.env.PUBLIC_URL}/owner.html`,
-    action: '사장님 페이지 열기',
+      '운영자용, 사용자용, 질의 작성 플로우까지 기존에 정리해둔 바로고 서비스 시안을 그대로 이어서 확인할 수 있습니다.',
+    cards: [
+      {
+        label: 'OWNER SYSTEM',
+        title: '사장님 운영 시스템',
+        description:
+          '매장 운영, 쿠폰 관리, 리뷰 확인, 공지와 CS 대응까지 사장님용 관리 화면으로 바로 진입합니다.',
+        href: `${process.env.PUBLIC_URL}/owner.html`,
+        action: '사장님 페이지 열기',
+      },
+      {
+        label: 'USER SYSTEM',
+        title: '사용자 웹 · 모바일 서비스',
+        description:
+          '바 탐색, 이벤트, 쿠폰, 마이페이지, 알림, 고객지원까지 실제 사용자 흐름으로 확인할 수 있습니다.',
+        href: `${process.env.PUBLIC_URL}/user.html`,
+        action: '사용자 서비스 열기',
+        highlight: true,
+      },
+      {
+        label: 'Q&A FLOW',
+        title: '질의 · 응답 작성 플로우',
+        description:
+          '저장 없이 화면만 먼저 확인할 수 있는 5단계 질의 작성 흐름입니다. 이전과 다음 이동으로 입력 경험을 살펴볼 수 있습니다.',
+        href: `${process.env.PUBLIC_URL}/user-qa.html`,
+        action: '질의/응답 열기',
+      },
+    ],
   },
   {
-    label: 'USER SYSTEM',
-    title: '사용자 웹 · 모바일 서비스',
+    label: 'CHURCH COMMUNITY',
+    title: '교회 커뮤니티 진입 허브',
     description:
-      '바 탐색, 이벤트, 쿠폰, 마이페이지, 알림, 고객지원까지 실제 사용자 흐름으로 확인할 수 있습니다.',
-    href: `${process.env.PUBLIC_URL}/user.html`,
-    action: '사용자 서비스 열기',
-    highlight: true,
-  },
-  {
-    label: 'Q&A FLOW',
-    title: '질의 · 응답 작성 플로우',
-    description:
-      '저장 없이 화면만 먼저 확인할 수 있는 5단계 질의 작성 흐름입니다. 이전 / 다음으로 실제 입력 경험을 볼 수 있습니다.',
-    href: `${process.env.PUBLIC_URL}/user-qa.html`,
-    action: '질의/응답 열기',
+      '교회 커뮤니티 서비스 컨셉을 관리자 웹과 신도용 앱으로 나누어 구성했습니다. 첨부해주신 레퍼런스처럼 버튼 중심의 또렷한 대비와 부드러운 여백을 적용했습니다.',
+    cards: [
+      {
+        label: 'ADMIN WEB',
+        title: '교회 관리자용 웹 서비스',
+        description:
+          '교회 계정, 회원 승인, 그룹 운영, 커뮤니티 관리, 공지와 행사 등록, 통계와 CS까지 운영 흐름을 한 페이지로 정리했습니다.',
+        href: `${process.env.PUBLIC_URL}/church-admin.html`,
+        action: '관리자 화면 열기',
+      },
+      {
+        label: 'MEMBER APP',
+        title: '교회 커뮤니티 사용자 앱',
+        description:
+          '신도 가입과 인증, 커뮤니티 탐색, 일정 보기, 교회 소개, 마이페이지, 고객지원까지 사용자 관점으로 소개합니다.',
+        href: `${process.env.PUBLIC_URL}/church-user.html`,
+        action: '사용자 화면 열기',
+        highlight: true,
+      },
+    ],
   },
 ];
 
@@ -95,7 +128,7 @@ function App() {
               type="password"
               value={password}
               onChange={(event) => setPassword(event.target.value)}
-              placeholder="비밀번호를 입력하세요"
+              placeholder="비밀번호를 입력해 주세요"
               autoComplete="current-password"
               required
             />
@@ -110,26 +143,41 @@ function App() {
   return (
     <main className="app-shell">
       <section className="app-hero">
-        <p className="app-kicker">BAROGO SERVICE HUB</p>
-        <h1>사장님, 사용자, 질의·응답 흐름을 한 화면에서 바로 선택할 수 있게 구성했습니다.</h1>
+        <p className="app-kicker">SERVICE CONCEPT HUB</p>
+        <h1>서비스별 진입로를 한 화면에서 빠르게 선택하고, 역할에 맞는 시안을 바로 열어볼 수 있도록 구성했습니다.</h1>
         <p className="app-description">
-          첫 진입 화면에서 필요한 역할과 목적에 따라 바로 이동할 수 있도록 허브를 정리했습니다.
-          운영용 화면과 사용자용 서비스는 유지하면서, 별도 확인이 필요한 질의·응답 작성 플로우도
-          독립 진입으로 분리했습니다.
+          기존 바로고 시안은 그대로 유지하고, 새로 요청하신 교회 커뮤니티 서비스는 관리자 웹과 사용자 앱으로
+          분리해 추가했습니다. 운영 도구와 사용자 경험을 한 번에 비교할 수 있도록 섹션별 카드 허브로 정리했습니다.
         </p>
 
-        <div className="entry-grid entry-grid-triple">
-          {entryCards.map((card) => (
-            <article key={card.href} className={`entry-card${card.highlight ? ' highlight' : ''}`}>
-              <p className="entry-label">{card.label}</p>
-              <h2>{card.title}</h2>
-              <p>{card.description}</p>
-              <div className="app-actions">
-                <a href={card.href} target="_blank" rel="noreferrer">
-                  {card.action}
-                </a>
+        <div className="group-stack">
+          {entryGroups.map((group) => (
+            <section key={group.label} className="entry-group">
+              <div className="group-copy">
+                <p className="entry-label">{group.label}</p>
+                <h2>{group.title}</h2>
+                <p>{group.description}</p>
               </div>
-            </article>
+
+              <div
+                className={`entry-grid ${
+                  group.cards.length === 3 ? 'entry-grid-triple' : 'entry-grid-double'
+                }`}
+              >
+                {group.cards.map((card) => (
+                  <article key={card.href} className={`entry-card${card.highlight ? ' highlight' : ''}`}>
+                    <p className="entry-label">{card.label}</p>
+                    <h3>{card.title}</h3>
+                    <p>{card.description}</p>
+                    <div className="app-actions">
+                      <a href={card.href} target="_blank" rel="noreferrer">
+                        {card.action}
+                      </a>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </section>
           ))}
         </div>
       </section>
