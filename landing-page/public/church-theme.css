@@ -1,13 +1,14 @@
-:root {
+﻿:root {
   --church-accent: #ff7a3d;
   --church-accent-soft: rgba(255, 122, 61, 0.12);
   --church-ink: #181818;
-  --church-muted: #727272;
-  --church-line: #d9d9dd;
-  --church-soft: #f6f3ef;
-  --church-card: rgba(255, 255, 255, 0.88);
-  --church-violet: #8f5cff;
-  --church-shadow: 0 24px 64px rgba(24, 24, 24, 0.08);
+  --church-muted: #6f6f74;
+  --church-line: #dedee3;
+  --church-bg: #f7f4ef;
+  --church-surface: rgba(255, 255, 255, 0.92);
+  --church-violet: rgba(143, 92, 255, 0.58);
+  --church-shadow: 0 24px 60px rgba(24, 24, 24, 0.08);
+  --church-dark: #171717;
 }
 
 * {
@@ -23,9 +24,9 @@ body {
   min-height: 100vh;
   color: var(--church-ink);
   background:
-    radial-gradient(circle at top right, rgba(255, 122, 61, 0.12), transparent 24%),
-    radial-gradient(circle at bottom left, rgba(143, 92, 255, 0.08), transparent 20%),
-    linear-gradient(180deg, #fcfaf8 0%, #f3efe8 100%);
+    radial-gradient(circle at top left, rgba(255, 122, 61, 0.12), transparent 24%),
+    radial-gradient(circle at bottom right, rgba(143, 92, 255, 0.09), transparent 18%),
+    linear-gradient(180deg, #fcfbf8 0%, var(--church-bg) 100%);
   font-family: "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
 }
 
@@ -34,27 +35,28 @@ a {
   text-decoration: none;
 }
 
-.church-shell {
-  width: min(1280px, calc(100% - 48px));
-  margin: 0 auto;
-  padding: 28px 0 56px;
+button,
+input,
+textarea {
+  font: inherit;
 }
 
-.church-topbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-  padding: 18px 0 24px;
+input,
+textarea {
+  width: 100%;
+  min-height: 52px;
+  padding: 14px 16px;
+  border: 1px solid var(--church-line);
+  border-radius: 18px;
+  background: #fff;
 }
 
-.church-brand {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+textarea {
+  min-height: 126px;
+  resize: vertical;
 }
 
-.church-kicker {
+.church-mono {
   margin: 0;
   color: var(--church-muted);
   font-size: 0.82rem;
@@ -62,477 +64,631 @@ a {
   letter-spacing: 0.14em;
 }
 
-.church-brand strong {
-  font-size: clamp(2rem, 3vw, 3.2rem);
-  font-weight: 900;
-  letter-spacing: -0.06em;
-}
-
-.church-top-actions {
-  display: flex;
+.solid-chip,
+.line-chip,
+.ghost-chip,
+.pill-action,
+.inline-actions button {
+  display: inline-flex;
   align-items: center;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-
-.pill-button,
-.ghost-button,
-.ink-button,
-.underline-button {
-  min-height: 54px;
-  padding: 0 22px;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 18px;
   border-radius: 18px;
   font-weight: 800;
-  font-size: 1rem;
-  transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease, color 180ms ease;
+  cursor: pointer;
 }
 
-.pill-button:hover,
-.ghost-button:hover,
-.ink-button:hover,
-.underline-button:hover {
-  transform: translateY(-1px);
-}
-
-.pill-button {
+.solid-chip,
+.pill-action,
+.inline-actions button {
   border: 1px solid var(--church-accent);
   background: var(--church-accent);
   color: #fff;
-  box-shadow: 0 16px 28px rgba(255, 122, 61, 0.2);
 }
 
-.ghost-button {
+.line-chip {
   border: 1px solid var(--church-accent);
   background: rgba(255, 255, 255, 0.75);
   color: var(--church-accent);
 }
 
-.ink-button {
-  border: 1px solid #141414;
-  background: #141414;
-  color: #fff;
-}
-
-.underline-button {
-  border: none;
-  background: transparent;
-  color: var(--church-ink);
-  text-decoration: underline;
-  text-underline-offset: 5px;
-  padding: 0 4px;
-  min-height: auto;
-}
-
-.church-hero {
-  position: relative;
-  overflow: hidden;
-  display: grid;
-  grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.8fr);
-  gap: 28px;
-  padding: 36px;
-  border: 1px solid rgba(143, 92, 255, 0.18);
-  border-radius: 34px;
-  background: var(--church-card);
-  box-shadow: var(--church-shadow);
-}
-
-.church-hero::before {
-  content: "";
-  position: absolute;
-  inset: 22px;
-  border: 2px dashed rgba(143, 92, 255, 0.55);
-  border-radius: 28px;
-  pointer-events: none;
-}
-
-.church-hero-copy,
-.church-hero-side {
-  position: relative;
-  z-index: 1;
-}
-
-.church-title {
-  margin: 0;
-  font-size: clamp(2.5rem, 4vw, 4.2rem);
-  line-height: 1.05;
-  letter-spacing: -0.06em;
-}
-
-.church-summary {
-  margin: 18px 0 0;
-  color: #575757;
-  font-size: 1.05rem;
-  line-height: 1.8;
-}
-
-.button-showcase {
-  display: grid;
-  gap: 16px;
-  margin-top: 28px;
-}
-
-.button-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
-}
-
-.tag-list,
-.category-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 18px;
-}
-
-.chip-tag,
-.category-chip {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  min-height: 52px;
-  padding: 0 18px;
-  border: 1px solid #d3d3d7;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.78);
-  font-size: 1rem;
-  font-weight: 700;
-}
-
-.category-chip.active {
-  border-color: var(--church-accent);
+.ghost-chip {
+  border: 1px solid var(--church-line);
+  background: #fff;
   color: var(--church-ink);
 }
 
-.chip-tag strong,
-.category-chip strong {
-  font-weight: 800;
-}
-
-.chip-tag span,
-.category-chip span {
-  color: #c4c4c8;
-  font-size: 1.25rem;
-  line-height: 1;
-}
-
-.hero-side-card,
-.content-card,
-.nav-demo,
-.feature-card,
-.flow-card {
-  border-radius: 28px;
-  background: rgba(255, 255, 255, 0.92);
-  box-shadow: var(--church-shadow);
-}
-
-.hero-side-card {
-  padding: 24px;
-  display: grid;
-  gap: 18px;
-}
-
-.mini-top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-}
-
-.circle-icon {
-  width: 60px;
-  height: 60px;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  background: #fff;
-  box-shadow: 0 10px 24px rgba(17, 17, 17, 0.08);
-  font-size: 1.4rem;
-}
-
-.mini-icons {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.church-wordmark {
-  font-size: 3rem;
-  font-weight: 900;
-  letter-spacing: -0.07em;
-}
-
-.top-stack {
-  display: grid;
-  gap: 12px;
-}
-
-.top-strip {
-  min-height: 82px;
-  display: grid;
-  grid-template-columns: 54px minmax(0, 1fr) auto;
-  align-items: center;
-  gap: 14px;
-  padding: 0 20px;
-  background: #fff;
-  border-radius: 22px;
-}
-
-.top-strip.dark {
-  background: #141414;
-  color: #fff;
-}
-
-.top-strip strong {
-  text-align: center;
-  font-size: 1.7rem;
-  letter-spacing: -0.04em;
-}
-
-.top-strip span {
-  color: var(--church-accent);
-  font-weight: 800;
-}
-
-.church-section {
-  display: grid;
-  gap: 24px;
-  margin-top: 28px;
-}
-
-.section-head {
-  display: flex;
-  align-items: end;
-  justify-content: space-between;
-  gap: 16px;
-  padding: 0 2px;
-}
-
-.section-head h2 {
-  margin: 0;
-  font-size: 2rem;
-  letter-spacing: -0.04em;
-}
-
-.section-head p {
-  margin: 12px 0 0;
-  color: #666;
-  line-height: 1.7;
-}
-
-.section-line {
-  height: 2px;
-  background: linear-gradient(90deg, #111 0%, rgba(17, 17, 17, 0.12) 100%);
-}
-
-.nav-demo {
-  padding: 24px;
-  border: 2px dashed rgba(143, 92, 255, 0.55);
-}
-
-.nav-grid {
-  display: grid;
-  gap: 18px;
-}
-
-.nav-card {
-  display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 10px;
-  padding: 24px 18px;
-  border: 1px solid #ececef;
-  background: #fff;
-  border-radius: 24px;
-}
-
-.nav-item {
-  display: grid;
-  justify-items: center;
-  gap: 10px;
-  color: #9a9a9d;
-  text-align: center;
-}
-
-.nav-item .icon {
-  font-size: 2.2rem;
-  line-height: 1;
-}
-
-.nav-item strong {
-  font-size: 1.1rem;
-}
-
-.nav-item.active {
-  color: var(--church-accent);
-}
-
-.home-indicator {
-  width: 270px;
-  height: 10px;
-  margin: 0 auto;
-  border-radius: 999px;
-  background: #e4e1dd;
-}
-
-.content-grid,
-.feature-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 20px;
-}
-
-.content-card,
-.feature-card,
-.flow-card {
-  padding: 24px;
-  border: 1px solid rgba(143, 92, 255, 0.12);
-}
-
-.content-card h3,
-.feature-card h3,
-.flow-card h3 {
-  margin: 0;
-  font-size: 1.35rem;
-  letter-spacing: -0.03em;
-}
-
-.content-card p,
-.feature-card p,
-.flow-card p {
-  margin: 14px 0 0;
-  color: #666;
-  line-height: 1.72;
-}
-
-.bullet-list {
-  display: grid;
-  gap: 12px;
-  margin-top: 18px;
-}
-
-.bullet-list div {
-  display: grid;
-  grid-template-columns: 32px minmax(0, 1fr);
-  gap: 12px;
-  align-items: start;
-}
-
-.bullet-list span {
-  width: 32px;
-  height: 32px;
-  display: grid;
-  place-items: center;
-  border-radius: 12px;
-  background: var(--church-accent-soft);
-  color: var(--church-accent);
-  font-weight: 900;
-}
-
-.bullet-list strong {
-  display: block;
-  margin-bottom: 4px;
-  font-size: 1rem;
-}
-
-.bullet-list p {
-  margin: 0;
-}
-
-.feature-card.dark {
-  background: #151515;
-  color: #fff;
-  border-color: #151515;
-}
-
-.feature-card.dark p,
-.feature-card.dark .bullet-list p {
-  color: rgba(255, 255, 255, 0.72);
-}
-
-.feature-card.dark .bullet-list span {
-  background: rgba(255, 122, 61, 0.18);
-}
-
-.flow-card-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 20px;
-}
-
-.flow-step {
+.status-pill {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 58px;
-  height: 58px;
-  margin-bottom: 18px;
-  border-radius: 20px;
-  background: var(--church-accent);
-  color: #fff;
-  font-weight: 900;
-  font-size: 1.05rem;
+  min-height: 34px;
+  padding: 0 12px;
+  border-radius: 999px;
+  background: #efeff4;
+  color: #54545a;
+  font-size: 0.84rem;
+  font-weight: 800;
 }
 
-.back-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  margin-top: 10px;
-  color: #444;
+.status-pill.active {
+  background: var(--church-accent-soft);
+  color: var(--church-accent);
+}
+
+.status-pill.warn {
+  background: rgba(23, 23, 23, 0.08);
+  color: var(--church-dark);
+}
+
+.text-link {
+  color: #59595f;
+  font-size: 0.92rem;
   font-weight: 700;
 }
 
-@media (max-width: 1080px) {
-  .church-hero,
-  .content-grid,
-  .feature-grid,
-  .flow-card-grid {
+.topbar-actions,
+.button-band,
+.inline-actions,
+.meta-tags,
+.chip-scroll-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.button-band.compact {
+  gap: 10px;
+}
+
+.church-admin-shell {
+  display: grid;
+  grid-template-columns: 300px minmax(0, 1fr);
+  min-height: 100vh;
+}
+
+.church-admin-sidebar {
+  position: sticky;
+  top: 0;
+  align-self: start;
+  height: 100vh;
+  padding: 28px 22px;
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(18px);
+  border-right: 1px solid rgba(143, 92, 255, 0.14);
+}
+
+.church-admin-brand h1,
+.church-user-header h1 {
+  margin: 10px 0 0;
+  font-size: clamp(2rem, 3vw, 3.2rem);
+  letter-spacing: -0.06em;
+}
+
+.church-admin-brand p:last-child,
+.church-user-header p:last-child,
+.church-admin-topbar p:last-child {
+  color: var(--church-muted);
+  line-height: 1.8;
+}
+
+.church-admin-nav {
+  display: grid;
+  gap: 8px;
+  margin-top: 28px;
+}
+
+.church-admin-nav a {
+  padding: 14px 16px;
+  border-radius: 18px;
+  color: #38383d;
+  font-weight: 700;
+}
+
+.church-admin-nav a.active,
+.church-admin-nav a:hover {
+  background: var(--church-dark);
+  color: #fff;
+}
+
+.sidebar-cta-card,
+.admin-panel,
+.metric-card,
+.phone-frame,
+.member-section,
+.feature-surface-card,
+.support-card,
+.board-card {
+  background: var(--church-surface);
+  border: 1px solid rgba(143, 92, 255, 0.12);
+  box-shadow: var(--church-shadow);
+  border-radius: 28px;
+}
+
+.sidebar-cta-card {
+  margin-top: 28px;
+  padding: 20px;
+}
+
+.sidebar-cta-card strong {
+  display: block;
+  font-size: 1.08rem;
+}
+
+.sidebar-cta-card ul {
+  margin: 14px 0 18px;
+  padding-left: 18px;
+  color: var(--church-muted);
+  line-height: 1.8;
+}
+
+.church-admin-main {
+  padding: 28px;
+  display: grid;
+  gap: 20px;
+}
+
+.church-admin-topbar,
+.church-user-header {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 8px 4px 6px;
+}
+
+.church-admin-topbar h2 {
+  margin: 10px 0 0;
+  font-size: clamp(2rem, 3vw, 3rem);
+  letter-spacing: -0.05em;
+}
+
+.metric-grid,
+.admin-two-column,
+.feature-surface-grid,
+.mypage-grid,
+.support-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.metric-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.metric-card {
+  padding: 24px;
+}
+
+.metric-card span {
+  color: var(--church-muted);
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.metric-card strong {
+  display: block;
+  margin-top: 12px;
+  font-size: 3rem;
+  letter-spacing: -0.06em;
+}
+
+.metric-card p {
+  margin: 10px 0 0;
+  color: var(--church-muted);
+}
+
+.metric-card.focus {
+  background: linear-gradient(135deg, rgba(255, 122, 61, 0.98), rgba(255, 156, 97, 0.92));
+  color: #fff;
+}
+
+.metric-card.focus span,
+.metric-card.focus p {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.metric-card.dark,
+.dark-panel {
+  background: linear-gradient(135deg, #171717 0%, #2a2a2a 100%);
+  color: #fff;
+}
+
+.metric-card.dark span,
+.metric-card.dark p,
+.dark-panel p,
+.dark-panel .church-mono {
+  color: rgba(255, 255, 255, 0.76);
+}
+
+.admin-two-column {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.admin-panel,
+.member-section {
+  padding: 24px;
+}
+
+.panel-title-row,
+.section-title-row {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.panel-title-row h3,
+.section-title-row h3 {
+  margin: 8px 0 0;
+  font-size: 1.55rem;
+  letter-spacing: -0.04em;
+}
+
+.form-grid,
+.notice-editor {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.form-grid label,
+.notice-editor label {
+  display: grid;
+  gap: 8px;
+}
+
+.form-grid span,
+.notice-editor span {
+  color: var(--church-muted);
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.form-grid .wide,
+.notice-editor .wide {
+  grid-column: 1 / -1;
+}
+
+.data-list,
+.report-stack,
+.schedule-list,
+.feed-mini-list,
+.schedule-mini-list,
+.community-board-list {
+  display: grid;
+  gap: 14px;
+}
+
+.data-item,
+.report-card,
+.schedule-item,
+.mobile-card,
+.board-card {
+  padding: 18px;
+  border-radius: 22px;
+  background: #fbfbfd;
+  border: 1px solid var(--church-line);
+}
+
+.data-item,
+.mobile-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.data-item p,
+.report-card p,
+.schedule-item p,
+.mobile-card p,
+.board-card p,
+.feature-surface-card p,
+.support-card p {
+  margin: 8px 0 0;
+  color: var(--church-muted);
+  line-height: 1.7;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.admin-table th,
+.admin-table td {
+  padding: 14px 10px;
+  border-bottom: 1px solid var(--church-line);
+  text-align: left;
+}
+
+.admin-table th {
+  color: var(--church-muted);
+  font-size: 0.84rem;
+  text-transform: uppercase;
+}
+
+.chart-bars {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  align-items: end;
+  gap: 14px;
+  min-height: 220px;
+  margin-top: 18px;
+}
+
+.chart-bars div {
+  display: grid;
+  justify-items: center;
+  gap: 10px;
+}
+
+.chart-bars span {
+  width: 100%;
+  max-width: 54px;
+  border-radius: 18px 18px 8px 8px;
+  background: linear-gradient(180deg, rgba(255, 122, 61, 1) 0%, rgba(255, 177, 136, 0.92) 100%);
+}
+
+.chart-bars em {
+  color: rgba(255, 255, 255, 0.74);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.support-grid,
+.feature-surface-grid,
+.mypage-grid,
+.user-support-grid,
+.calendar-preview {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.support-card,
+.feature-surface-card,
+.calendar-column {
+  padding: 20px;
+}
+
+.church-user-shell {
+  width: min(1380px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 28px 0 48px;
+}
+
+.app-preview-layout {
+  display: grid;
+  grid-template-columns: 420px minmax(0, 1fr);
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.phone-stage {
+  position: sticky;
+  top: 24px;
+  align-self: start;
+}
+
+.phone-frame {
+  padding: 18px;
+  border-radius: 38px;
+  border: 2px dashed var(--church-violet);
+}
+
+.mobile-app-top,
+.mobile-bottom-nav,
+.mobile-home-card,
+.mobile-card-stack {
+  background: #fff;
+}
+
+.mobile-app-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 18px 12px;
+  border-radius: 26px 26px 20px 20px;
+}
+
+.mobile-branding {
+  display: grid;
+}
+
+.mobile-branding strong {
+  font-size: 2rem;
+  letter-spacing: -0.06em;
+}
+
+.mobile-branding span {
+  color: var(--church-muted);
+  font-size: 0.9rem;
+}
+
+.mobile-top-icons {
+  display: flex;
+  gap: 10px;
+  font-size: 1.2rem;
+}
+
+.mobile-home-card {
+  margin-top: 12px;
+  padding: 22px 18px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #fff6f0 0%, #fff 100%);
+}
+
+.mobile-home-card h2 {
+  margin: 10px 0 0;
+  font-size: 2rem;
+  line-height: 1.1;
+  letter-spacing: -0.05em;
+}
+
+.mobile-home-card p:last-child {
+  margin-top: 12px;
+  color: var(--church-muted);
+  line-height: 1.7;
+}
+
+.soft-chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 42px;
+  padding: 0 14px;
+  border-radius: 999px;
+  border: 1px solid var(--church-line);
+  background: #fff;
+  font-weight: 700;
+}
+
+.soft-chip.active {
+  border-color: var(--church-accent);
+  color: var(--church-accent);
+}
+
+.mobile-card-stack {
+  display: grid;
+  gap: 12px;
+  margin-top: 12px;
+  padding: 0 0 14px;
+  border-radius: 22px;
+}
+
+.mobile-card.emphasis {
+  background: #171717;
+  color: #fff;
+}
+
+.mobile-card.emphasis p {
+  color: rgba(255, 255, 255, 0.76);
+}
+
+.mobile-bottom-nav {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 14px;
+  padding: 14px 10px 10px;
+  border-radius: 22px;
+}
+
+.mobile-bottom-nav a {
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+  color: #a0a0a4;
+}
+
+.mobile-bottom-nav a.active {
+  color: var(--church-accent);
+}
+
+.mobile-bottom-nav span {
+  font-size: 1.55rem;
+  line-height: 1;
+}
+
+.mobile-bottom-nav em {
+  font-style: normal;
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.app-detail-column {
+  display: grid;
+  gap: 18px;
+}
+
+.calendar-column {
+  border-radius: 22px;
+  background: #fbfbfd;
+  border: 1px solid var(--church-line);
+}
+
+.calendar-column strong {
+  display: block;
+  margin-bottom: 14px;
+}
+
+.calendar-column ul {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--church-muted);
+  line-height: 1.9;
+}
+
+@media (max-width: 1180px) {
+  .metric-grid,
+  .admin-two-column,
+  .app-preview-layout,
+  .support-grid,
+  .feature-surface-grid,
+  .mypage-grid,
+  .calendar-preview,
+  .user-support-grid {
     grid-template-columns: 1fr;
   }
 
-  .nav-card {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+  .church-admin-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .church-admin-sidebar {
+    position: static;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid rgba(143, 92, 255, 0.14);
+  }
+
+  .phone-stage {
+    position: static;
   }
 }
 
-@media (max-width: 720px) {
-  .church-shell {
-    width: calc(100% - 28px);
-    padding-top: 18px;
+@media (max-width: 760px) {
+  .church-admin-main,
+  .church-user-shell {
+    padding-left: 18px;
+    padding-right: 18px;
   }
 
-  .church-topbar,
-  .section-head,
-  .button-row {
+  .church-user-shell {
+    width: 100%;
+  }
+
+  .church-admin-topbar,
+  .church-user-header,
+  .panel-title-row,
+  .section-title-row,
+  .data-item,
+  .mobile-card-head {
     flex-direction: column;
     align-items: flex-start;
   }
 
-  .church-hero {
-    padding: 24px;
-    border-radius: 26px;
+  .form-grid,
+  .notice-editor,
+  .support-grid,
+  .feature-surface-grid,
+  .mypage-grid,
+  .calendar-preview,
+  .user-support-grid {
+    grid-template-columns: 1fr;
   }
 
-  .church-hero::before {
-    inset: 14px;
-    border-radius: 20px;
+  .metric-card strong {
+    font-size: 2.3rem;
   }
 
-  .nav-card {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .top-strip {
-    grid-template-columns: 42px minmax(0, 1fr) auto;
-    min-height: 72px;
-    padding: 0 14px;
-  }
-
-  .top-strip strong {
-    font-size: 1.3rem;
-  }
-
-  .home-indicator {
-    width: 160px;
+  .phone-frame,
+  .admin-panel,
+  .member-section,
+  .metric-card,
+  .sidebar-cta-card {
+    border-radius: 24px;
   }
 }

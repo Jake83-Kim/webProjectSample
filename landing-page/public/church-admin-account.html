@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>교회 커뮤니티 - 교회 계정</title>
+    <link rel="stylesheet" href="church-theme.css" />
+  </head>
+  <body class="church-admin-body">
+    <div class="church-admin-shell">
+      <aside class="church-admin-sidebar">
+        <div class="church-admin-brand">
+          <p class="church-mono">CHURCH ADMIN</p>
+          <h1>플랫폼 Admin</h1>
+          <p>교회 운영, 회원 승인, 커뮤니티 관리, 공지/행사 등록을 한 곳에서 처리하는 관리자 웹입니다.</p>
+        </div>
+        <nav class="church-admin-nav">
+          <a href="church-admin.html">대시보드</a>
+          <a class="active" href="church-admin-account.html">교회 계정</a>
+          <a href="church-admin-members.html">회원 관리</a>
+          <a href="church-admin-groups.html">그룹 관리</a>
+          <a href="church-admin-community.html">커뮤니티 관리</a>
+          <a href="church-admin-notice.html">공지</a>
+          <a href="church-admin-events.html">일정 및 행사</a>
+          <a href="church-admin-stats.html">통계</a>
+          <a href="church-admin-support.html">고객지원</a>
+        </nav>
+      </aside>
+      <main class="church-admin-main">
+        <header class="church-admin-topbar">
+          <div>
+            <p class="church-mono">CHURCH ACCOUNT</p>
+            <h2>교회 계정 및 소개 관리</h2>
+            <p>교회 프로필, 관리자 계정 정보, 대표 연락처, 예배 안내와 소개 문구를 관리하는 페이지입니다.</p>
+          </div>
+          <div class="topbar-actions">
+            <a class="line-chip" href="church-admin.html">대시보드</a>
+            <a class="solid-chip" href="church-admin-support.html">보안 설정</a>
+          </div>
+        </header>
+        <section class="admin-two-column">
+          <article class="admin-panel">
+            <div class="panel-title-row">
+              <div>
+                <p class="church-mono">PROFILE</p>
+                <h3>교회 기본 정보</h3>
+              </div>
+              <span class="status-pill active">저장 완료</span>
+            </div>
+            <div class="form-grid">
+              <label><span>교회명</span><input type="text" value="새봄중앙교회" readonly /></label>
+              <label><span>대표 전화</span><input type="text" value="02-555-1234" readonly /></label>
+              <label><span>대표 이메일</span><input type="text" value="hello@platform.co.kr" readonly /></label>
+              <label><span>대표 관리자</span><input type="text" value="이정민 목사" readonly /></label>
+              <label class="wide"><span>교회 소개</span><textarea readonly>청년, 가족, 새가족이 함께 예배하고 교제하는 도시형 공동체 교회입니다. 플랫폼 안에서 공지와 일정, 커뮤니티 활동을 함께 운영합니다.</textarea></label>
+            </div>
+          </article>
+          <article class="admin-panel">
+            <div class="panel-title-row">
+              <div>
+                <p class="church-mono">EXPOSURE</p>
+                <h3>교회 소개 노출 설정</h3>
+              </div>
+              <button class="pill-action">수정 요청</button>
+            </div>
+            <div class="data-list">
+              <div class="data-item">
+                <div>
+                  <strong>예배 시간 노출</strong>
+                  <p>주일 1부 09:00 / 2부 11:00 / 청년예배 14:00</p>
+                </div>
+                <span class="status-pill active">공개</span>
+              </div>
+              <div class="data-item">
+                <div>
+                  <strong>위치 및 주차 안내</strong>
+                  <p>서울시 강남구 테헤란로 00, 지하주차장 2시간 지원</p>
+                </div>
+                <span class="status-pill active">공개</span>
+              </div>
+              <div class="data-item">
+                <div>
+                  <strong>새가족 문의 버튼</strong>
+                  <p>사용자 앱 교회 소개 화면에서 문의 CTA 노출 중</p>
+                </div>
+                <span class="status-pill">연동중</span>
+              </div>
+            </div>
+          </article>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

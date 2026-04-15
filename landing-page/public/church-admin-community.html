@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>교회 커뮤니티 - 커뮤니티 관리</title>
+    <link rel="stylesheet" href="church-theme.css" />
+  </head>
+  <body class="church-admin-body">
+    <div class="church-admin-shell">
+      <aside class="church-admin-sidebar">
+        <div class="church-admin-brand">
+          <p class="church-mono">CHURCH ADMIN</p>
+          <h1>플랫폼 Admin</h1>
+          <p>커뮤니티 목록, 게시글 상세 검토, 신고/차단 처리와 카테고리 운영을 다루는 화면입니다.</p>
+        </div>
+        <nav class="church-admin-nav">
+          <a href="church-admin.html">대시보드</a>
+          <a href="church-admin-account.html">교회 계정</a>
+          <a href="church-admin-members.html">회원 관리</a>
+          <a href="church-admin-groups.html">그룹 관리</a>
+          <a class="active" href="church-admin-community.html">커뮤니티 관리</a>
+          <a href="church-admin-notice.html">공지</a>
+          <a href="church-admin-events.html">일정 및 행사</a>
+          <a href="church-admin-stats.html">통계</a>
+          <a href="church-admin-support.html">고객지원</a>
+        </nav>
+      </aside>
+      <main class="church-admin-main">
+        <header class="church-admin-topbar">
+          <div>
+            <p class="church-mono">COMMUNITY CONTROL</p>
+            <h2>커뮤니티 게시글 및 신고 대응</h2>
+            <p>문제 발생 시 즉시 대응할 수 있는 신고/차단 중심 운영 화면입니다.</p>
+          </div>
+          <div class="topbar-actions">
+            <a class="solid-chip" href="church-admin-notice.html">카테고리 공지 작성</a>
+          </div>
+        </header>
+        <section class="admin-two-column">
+          <article class="admin-panel">
+            <div class="panel-title-row">
+              <div><p class="church-mono">REPORTS</p><h3>신고 접수 목록</h3></div>
+              <span class="status-pill warn">긴급 2건</span>
+            </div>
+            <div class="report-stack">
+              <article class="report-card"><strong>자유게시판 / 댓글 신고</strong><p>욕설 포함 댓글 3회 누적 신고. 즉시 숨김 권장.</p><div class="button-band compact"><a class="solid-chip" href="church-admin-community.html">숨김 처리</a><a class="line-chip" href="church-admin-community.html">사용자 차단</a></div></article>
+              <article class="report-card"><strong>기도제목 / 도배 게시물</strong><p>동일 내용 12회 반복. 자동 제한 후보로 표시됨.</p><div class="button-band compact"><a class="solid-chip" href="church-admin-community.html">게시 제한</a><a class="ghost-chip" href="church-admin-community.html">기록 보관</a></div></article>
+            </div>
+          </article>
+          <article class="admin-panel">
+            <div class="panel-title-row">
+              <div><p class="church-mono">CATEGORIES</p><h3>커뮤니티 카테고리 관리</h3></div>
+            </div>
+            <div class="data-list">
+              <div class="data-item"><div><strong>자유게시판</strong><p>기본 커뮤니티 · 전체 공개</p></div><span class="status-pill active">사용중</span></div>
+              <div class="data-item"><div><strong>기도제목</strong><p>댓글 허용 · 신고 민감도 높음</p></div><span class="status-pill">모니터링</span></div>
+              <div class="data-item"><div><strong>새가족 Q&A</strong><p>운영진 답변 우선 노출</p></div><span class="status-pill active">사용중</span></div>
+            </div>
+          </article>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
