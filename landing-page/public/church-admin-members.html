@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
@@ -38,25 +38,80 @@
             <a class="solid-chip" href="church-admin-groups.html">그룹 배정</a>
           </div>
         </header>
+
         <section class="metric-grid">
           <article class="metric-card focus"><span>승인 대기</span><strong>18</strong><p>오늘 기준 신규 신청</p></article>
           <article class="metric-card"><span>추가 확인</span><strong>6</strong><p>인증자료 재요청 필요</p></article>
           <article class="metric-card"><span>활성 회원</span><strong>428</strong><p>이번 달 로그인 기록 있음</p></article>
           <article class="metric-card dark"><span>정지 계정</span><strong>3</strong><p>운영자 수동 제한</p></article>
         </section>
+
         <section class="admin-panel">
           <div class="panel-title-row">
             <div>
-              <p class="church-mono">APPROVAL QUEUE</p>
-              <h3>가입 승인 대기 목록</h3>
+              <p class="church-mono">FILTERS</p>
+              <h3>회원 검색 및 상태 필터</h3>
             </div>
-            <button class="pill-action">승인 일괄 처리</button>
+            <button class="pill-action">내보내기</button>
           </div>
-          <div class="data-list">
-            <div class="data-item"><div><strong>김은서</strong><p>청년부 · 신분증 인증 완료 · 셀모임 참여 희망</p></div><div class="inline-actions"><span class="status-pill warn">승인 대기</span><button>승인</button></div></div>
-            <div class="data-item"><div><strong>박지훈</strong><p>새가족 등록 · 전화번호 재확인 필요</p></div><div class="inline-actions"><span class="status-pill">추가 확인</span><button>검토</button></div></div>
-            <div class="data-item"><div><strong>이소민</strong><p>봉사팀 지원 · 기존 출석 이력 자동 매칭</p></div><div class="inline-actions"><span class="status-pill active">추천</span><button>배정</button></div></div>
+          <div class="filter-toolbar">
+            <input type="text" value="이름, 전화번호, 그룹명으로 검색" readonly />
+            <span class="status-pill active">승인 대기</span>
+            <span class="status-pill">활성 회원</span>
+            <span class="status-pill">추가 확인</span>
+            <span class="status-pill warn">정지 계정</span>
           </div>
+        </section>
+
+        <section class="detail-split-grid">
+          <article class="admin-panel">
+            <div class="panel-title-row">
+              <div>
+                <p class="church-mono">APPROVAL QUEUE</p>
+                <h3>가입 승인 대기 목록</h3>
+              </div>
+              <button class="pill-action">승인 일괄 처리</button>
+            </div>
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>이름</th>
+                  <th>소속</th>
+                  <th>인증 상태</th>
+                  <th>현재 상태</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>김은서</td><td>청년 2부</td><td>신분증 인증 완료</td><td><span class="status-pill warn">승인 대기</span></td></tr>
+                <tr><td>박지훈</td><td>새가족</td><td>전화번호 재확인 필요</td><td><span class="status-pill">추가 확인</span></td></tr>
+                <tr><td>이소민</td><td>봉사팀 지원</td><td>기존 출석 이력 자동 매칭</td><td><span class="status-pill active">추천</span></td></tr>
+                <tr><td>정하윤</td><td>새가족</td><td>본인 인증 완료</td><td><span class="status-pill warn">승인 대기</span></td></tr>
+              </tbody>
+            </table>
+          </article>
+
+          <article class="admin-panel">
+            <div class="panel-title-row">
+              <div>
+                <p class="church-mono">MEMBER DETAIL</p>
+                <h3>선택 회원 상세 정보</h3>
+              </div>
+              <span class="status-pill active">자동 추천</span>
+            </div>
+            <div class="profile-summary-card">
+              <strong>이소민</strong>
+              <p>봉사팀 지원 · 2026-04-15 가입 신청 · 연락처 010-2222-3333</p>
+            </div>
+            <div class="data-list">
+              <div class="data-item"><div><strong>신원 확인</strong><p>본인 인증 완료, 기존 출석 체크 기록 7회 자동 매칭</p></div><span class="status-pill active">완료</span></div>
+              <div class="data-item"><div><strong>추천 그룹</strong><p>주일 예배 봉사팀 / 새가족 정착반 후보로 분류됨</p></div><span class="status-pill">분석 결과</span></div>
+            </div>
+            <div class="button-band">
+              <a class="solid-chip" href="church-admin-groups.html">그룹 배정</a>
+              <a class="line-chip" href="church-admin-members.html">승인 처리</a>
+              <a class="ghost-chip" href="church-admin-support.html">플랫폼 문의</a>
+            </div>
+          </article>
         </section>
       </main>
     </div>

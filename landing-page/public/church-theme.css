@@ -200,7 +200,10 @@ textarea {
 .member-section,
 .feature-surface-card,
 .support-card,
-.board-card {
+.board-card,
+.profile-summary-card,
+.timeline-item,
+.calendar-column {
   background: var(--church-surface);
   border: 1px solid rgba(143, 92, 255, 0.12);
   box-shadow: var(--church-shadow);
@@ -249,13 +252,18 @@ textarea {
 .admin-two-column,
 .feature-surface-grid,
 .mypage-grid,
-.support-grid {
+.support-grid,
+.detail-split-grid {
   display: grid;
   gap: 18px;
 }
 
 .metric-grid {
   grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.detail-split-grid {
+  grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.8fr);
 }
 
 .metric-card {
@@ -353,12 +361,28 @@ textarea {
   grid-column: 1 / -1;
 }
 
+.filter-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 18px;
+  border-radius: 22px;
+  background: #fbfbfd;
+  border: 1px solid var(--church-line);
+}
+
+.filter-toolbar input {
+  flex: 1 1 320px;
+}
+
 .data-list,
 .report-stack,
 .schedule-list,
 .feed-mini-list,
 .schedule-mini-list,
-.community-board-list {
+.community-board-list,
+.timeline-list {
   display: grid;
   gap: 14px;
 }
@@ -367,11 +391,38 @@ textarea {
 .report-card,
 .schedule-item,
 .mobile-card,
-.board-card {
+.board-card,
+.timeline-item {
   padding: 18px;
   border-radius: 22px;
   background: #fbfbfd;
   border: 1px solid var(--church-line);
+}
+
+.profile-summary-card {
+  padding: 20px;
+  margin-bottom: 14px;
+}
+
+.profile-summary-card strong {
+  font-size: 1.16rem;
+}
+
+.profile-summary-card p {
+  margin: 10px 0 0;
+  color: var(--church-muted);
+  line-height: 1.7;
+}
+
+.timeline-item strong {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.timeline-item p {
+  margin: 0;
+  color: var(--church-muted);
+  line-height: 1.7;
 }
 
 .data-item,
@@ -603,12 +654,6 @@ textarea {
   gap: 18px;
 }
 
-.calendar-column {
-  border-radius: 22px;
-  background: #fbfbfd;
-  border: 1px solid var(--church-line);
-}
-
 .calendar-column strong {
   display: block;
   margin-bottom: 14px;
@@ -629,7 +674,8 @@ textarea {
   .feature-surface-grid,
   .mypage-grid,
   .calendar-preview,
-  .user-support-grid {
+  .user-support-grid,
+  .detail-split-grid {
     grid-template-columns: 1fr;
   }
 
@@ -665,7 +711,8 @@ textarea {
   .panel-title-row,
   .section-title-row,
   .data-item,
-  .mobile-card-head {
+  .mobile-card-head,
+  .filter-toolbar {
     flex-direction: column;
     align-items: flex-start;
   }
@@ -688,7 +735,9 @@ textarea {
   .admin-panel,
   .member-section,
   .metric-card,
-  .sidebar-cta-card {
+  .sidebar-cta-card,
+  .profile-summary-card,
+  .timeline-item {
     border-radius: 24px;
   }
 }
