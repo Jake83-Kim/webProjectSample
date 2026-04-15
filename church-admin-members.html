@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>교회 커뮤니티 - 회원 관리</title>
+    <link rel="stylesheet" href="church-theme.css" />
+  </head>
+  <body class="church-admin-body">
+    <div class="church-admin-shell">
+      <aside class="church-admin-sidebar">
+        <div class="church-admin-brand">
+          <p class="church-mono">CHURCH ADMIN</p>
+          <h1>플랫폼 Admin</h1>
+          <p>승인 대기, 활동 상태, 인증 여부를 빠르게 검토할 수 있는 회원 관리 화면입니다.</p>
+        </div>
+        <nav class="church-admin-nav">
+          <a href="church-admin.html">대시보드</a>
+          <a href="church-admin-account.html">교회 계정</a>
+          <a class="active" href="church-admin-members.html">회원 관리</a>
+          <a href="church-admin-groups.html">그룹 관리</a>
+          <a href="church-admin-community.html">커뮤니티 관리</a>
+          <a href="church-admin-notice.html">공지</a>
+          <a href="church-admin-events.html">일정 및 행사</a>
+          <a href="church-admin-stats.html">통계</a>
+          <a href="church-admin-support.html">고객지원</a>
+        </nav>
+      </aside>
+      <main class="church-admin-main">
+        <header class="church-admin-topbar">
+          <div>
+            <p class="church-mono">MEMBER MANAGEMENT</p>
+            <h2>회원 검색, 상태 변경, 가입 승인</h2>
+            <p>신원 확인 프로세스와 승인 큐를 운영자 시점에서 정리한 독립 화면입니다.</p>
+          </div>
+          <div class="topbar-actions">
+            <a class="line-chip" href="church-admin-stats.html">승인 통계</a>
+            <a class="solid-chip" href="church-admin-groups.html">그룹 배정</a>
+          </div>
+        </header>
+        <section class="metric-grid">
+          <article class="metric-card focus"><span>승인 대기</span><strong>18</strong><p>오늘 기준 신규 신청</p></article>
+          <article class="metric-card"><span>추가 확인</span><strong>6</strong><p>인증자료 재요청 필요</p></article>
+          <article class="metric-card"><span>활성 회원</span><strong>428</strong><p>이번 달 로그인 기록 있음</p></article>
+          <article class="metric-card dark"><span>정지 계정</span><strong>3</strong><p>운영자 수동 제한</p></article>
+        </section>
+        <section class="admin-panel">
+          <div class="panel-title-row">
+            <div>
+              <p class="church-mono">APPROVAL QUEUE</p>
+              <h3>가입 승인 대기 목록</h3>
+            </div>
+            <button class="pill-action">승인 일괄 처리</button>
+          </div>
+          <div class="data-list">
+            <div class="data-item"><div><strong>김은서</strong><p>청년부 · 신분증 인증 완료 · 셀모임 참여 희망</p></div><div class="inline-actions"><span class="status-pill warn">승인 대기</span><button>승인</button></div></div>
+            <div class="data-item"><div><strong>박지훈</strong><p>새가족 등록 · 전화번호 재확인 필요</p></div><div class="inline-actions"><span class="status-pill">추가 확인</span><button>검토</button></div></div>
+            <div class="data-item"><div><strong>이소민</strong><p>봉사팀 지원 · 기존 출석 이력 자동 매칭</p></div><div class="inline-actions"><span class="status-pill active">추천</span><button>배정</button></div></div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

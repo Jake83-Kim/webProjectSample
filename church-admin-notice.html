@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>교회 커뮤니티 - 공지 관리</title>
+    <link rel="stylesheet" href="church-theme.css" />
+  </head>
+  <body class="church-admin-body">
+    <div class="church-admin-shell">
+      <aside class="church-admin-sidebar">
+        <div class="church-admin-brand">
+          <p class="church-mono">CHURCH ADMIN</p>
+          <h1>플랫폼 Admin</h1>
+          <p>공지 목록, 상세, 등록/수정 흐름을 관리자 업무처럼 보이도록 정리한 화면입니다.</p>
+        </div>
+        <nav class="church-admin-nav">
+          <a href="church-admin.html">대시보드</a>
+          <a href="church-admin-account.html">교회 계정</a>
+          <a href="church-admin-members.html">회원 관리</a>
+          <a href="church-admin-groups.html">그룹 관리</a>
+          <a href="church-admin-community.html">커뮤니티 관리</a>
+          <a class="active" href="church-admin-notice.html">공지</a>
+          <a href="church-admin-events.html">일정 및 행사</a>
+          <a href="church-admin-stats.html">통계</a>
+          <a href="church-admin-support.html">고객지원</a>
+        </nav>
+      </aside>
+      <main class="church-admin-main">
+        <header class="church-admin-topbar">
+          <div><p class="church-mono">NOTICE</p><h2>공지 목록 보기 및 등록/수정</h2><p>공지사항을 즉시 등록하고 예약 게시까지 확인할 수 있는 페이지입니다.</p></div>
+          <div class="topbar-actions"><button class="pill-action">공지 새로 작성</button></div>
+        </header>
+        <section class="admin-two-column">
+          <article class="admin-panel">
+            <div class="panel-title-row"><div><p class="church-mono">EDITOR</p><h3>공지 작성기</h3></div></div>
+            <div class="notice-editor">
+              <label><span>제목</span><input type="text" value="부활절 새벽예배 안내" readonly /></label>
+              <label><span>대상</span><input type="text" value="전체 신도 / 새가족" readonly /></label>
+              <label class="wide"><span>본문</span><textarea readonly>부활절 새벽예배는 오전 5시 30분 본당에서 진행됩니다. 예배 후 간단한 조식이 제공됩니다.</textarea></label>
+            </div>
+          </article>
+          <article class="admin-panel">
+            <div class="panel-title-row"><div><p class="church-mono">NOTICE LIST</p><h3>최근 공지</h3></div></div>
+            <div class="data-list">
+              <div class="data-item"><div><strong>부활절 새벽예배 안내</strong><p>오늘 게시 · 전체 공개</p></div><span class="status-pill active">게시중</span></div>
+              <div class="data-item"><div><strong>청년부 봄 소풍 모집</strong><p>내일 오전 9시 예약 게시</p></div><span class="status-pill">예약</span></div>
+              <div class="data-item"><div><strong>주차장 이용 변경 공지</strong><p>수정 1회 · 열람 284</p></div><span class="status-pill active">게시중</span></div>
+            </div>
+          </article>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
