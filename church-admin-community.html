@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
@@ -37,7 +37,24 @@
             <a class="solid-chip" href="church-admin-notice.html">카테고리 공지 작성</a>
           </div>
         </header>
-        <section class="admin-two-column">
+
+        <section class="admin-panel">
+          <div class="panel-title-row">
+            <div>
+              <p class="church-mono">SEARCH & FILTER</p>
+              <h3>게시글 검색과 카테고리 선택</h3>
+            </div>
+          </div>
+          <div class="filter-toolbar">
+            <input type="text" value="게시글 제목, 작성자, 신고 사유 검색" readonly />
+            <span class="status-pill active">자유게시판</span>
+            <span class="status-pill">기도제목</span>
+            <span class="status-pill">새가족 Q&A</span>
+            <span class="status-pill warn">신고 누적</span>
+          </div>
+        </section>
+
+        <section class="detail-split-grid">
           <article class="admin-panel">
             <div class="panel-title-row">
               <div><p class="church-mono">REPORTS</p><h3>신고 접수 목록</h3></div>
@@ -48,14 +65,25 @@
               <article class="report-card"><strong>기도제목 / 도배 게시물</strong><p>동일 내용 12회 반복. 자동 제한 후보로 표시됨.</p><div class="button-band compact"><a class="solid-chip" href="church-admin-community.html">게시 제한</a><a class="ghost-chip" href="church-admin-community.html">기록 보관</a></div></article>
             </div>
           </article>
+
           <article class="admin-panel">
             <div class="panel-title-row">
-              <div><p class="church-mono">CATEGORIES</p><h3>커뮤니티 카테고리 관리</h3></div>
+              <div><p class="church-mono">POST DETAIL</p><h3>선택 게시글 검토</h3></div>
+              <span class="status-pill warn">신고 누적</span>
             </div>
-            <div class="data-list">
-              <div class="data-item"><div><strong>자유게시판</strong><p>기본 커뮤니티 · 전체 공개</p></div><span class="status-pill active">사용중</span></div>
-              <div class="data-item"><div><strong>기도제목</strong><p>댓글 허용 · 신고 민감도 높음</p></div><span class="status-pill">모니터링</span></div>
-              <div class="data-item"><div><strong>새가족 Q&A</strong><p>운영진 답변 우선 노출</p></div><span class="status-pill active">사용중</span></div>
+            <div class="profile-summary-card">
+              <strong>자유게시판 / “청년부 일정 문의”</strong>
+              <p>작성자 김OO · 오늘 14:20 · 댓글 9 · 신고 3건</p>
+            </div>
+            <div class="timeline-list">
+              <div class="timeline-item"><strong>신고 사유 1</strong><p>비방 표현 포함으로 사용자 2명이 신고</p></div>
+              <div class="timeline-item"><strong>신고 사유 2</strong><p>같은 내용 반복 댓글로 도배 판단</p></div>
+              <div class="timeline-item"><strong>운영자 메모</strong><p>숨김 후 작성자 경고 조치, 재발 시 3일 활동 제한 권장</p></div>
+            </div>
+            <div class="button-band">
+              <a class="solid-chip" href="church-admin-community.html">게시글 숨김</a>
+              <a class="line-chip" href="church-admin-community.html">작성자 제한</a>
+              <a class="ghost-chip" href="church-admin-support.html">상담 이관</a>
             </div>
           </article>
         </section>

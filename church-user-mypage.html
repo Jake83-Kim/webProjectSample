@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
@@ -12,16 +12,45 @@
         <div>
           <p class="church-mono">MEMBER APPLICATION</p>
           <h1>마이페이지</h1>
-          <p>스크랩 목록 보기와 프로필 수정 중심으로 구성한 개인 관리 페이지입니다.</p>
+          <p>스크랩 목록, 프로필 수정, 활동 이력을 하나로 묶은 개인 관리 페이지입니다.</p>
         </div>
         <div class="topbar-actions">
           <a class="line-chip" href="church-user-community.html">스크랩 원문 보기</a>
           <a class="solid-chip" href="church-user-support.html">문의하기</a>
         </div>
       </section>
-      <section class="mypage-grid">
-        <article class="feature-surface-card"><strong>스크랩 목록</strong><p>청년부 모임 후기, 봉사팀 공지, 새가족 환영식 안내 등 저장한 콘텐츠를 다시 확인할 수 있습니다.</p></article>
-        <article class="feature-surface-card"><strong>프로필 수정</strong><p>닉네임, 관심 그룹, 자기소개, 알림 설정을 변경하고 계정 상태를 관리합니다.</p></article>
+
+      <section class="detail-split-grid">
+        <article class="member-section">
+          <div class="section-title-row church-title-row">
+            <div><p class="church-mono">PROFILE</p><h3>내 프로필</h3></div>
+            <span class="status-pill active">정상</span>
+          </div>
+          <div class="profile-summary-card">
+            <strong>정유진</strong>
+            <p>청년부 · 새가족 섬김팀 관심 · 알림 수신 ON</p>
+          </div>
+          <div class="timeline-list">
+            <div class="timeline-item"><strong>프로필 소개</strong><p>함께 예배하고 나누는 커뮤니티를 좋아합니다. 청년부 모임과 봉사활동에 자주 참여하고 있어요.</p></div>
+            <div class="timeline-item"><strong>관심 그룹</strong><p>청년부 / 봉사팀 / 새가족 정착반</p></div>
+            <div class="timeline-item"><strong>설정</strong><p>행사 알림, 새 댓글 알림, 플랫폼 공지 수신 중</p></div>
+          </div>
+          <div class="button-band">
+            <a class="solid-chip" href="church-user-mypage.html">프로필 수정</a>
+            <a class="line-chip" href="church-user-support.html">계정 문의</a>
+          </div>
+        </article>
+
+        <article class="member-section">
+          <div class="section-title-row church-title-row">
+            <div><p class="church-mono">SAVED & ACTIVITY</p><h3>스크랩과 최근 활동</h3></div>
+            <a class="text-link" href="church-user-community.html">커뮤니티로 이동</a>
+          </div>
+          <div class="community-board-list">
+            <article class="board-card"><div><strong>스크랩한 글 12개</strong><p>청년부 후기, 봉사팀 공지, 새가족 환영식 안내 등 저장한 콘텐츠를 다시 확인할 수 있습니다.</p></div><div class="meta-tags"><span>#스크랩</span><span>#공지</span><span>#행사</span></div></article>
+            <article class="board-card"><div><strong>최근 활동</strong><p>좋아요 7회, 댓글 3회, 행사 보기 5회, 공지 열람 4회</p></div><div class="meta-tags"><span>#좋아요</span><span>#댓글</span><span>#참여</span></div></article>
+          </div>
+        </article>
       </section>
     </main>
   </body>

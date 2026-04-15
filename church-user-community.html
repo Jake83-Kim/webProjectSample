@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
@@ -19,18 +19,54 @@
           <a class="solid-chip" href="church-user-mypage.html">스크랩 보기</a>
         </div>
       </section>
-      <section class="app-detail-column">
-        <section class="member-section">
+
+      <section class="member-section">
+        <div class="section-title-row church-title-row">
+          <div><p class="church-mono">COMMUNITY FEED</p><h3>피드 탐색과 게시글 상세</h3></div>
+          <span class="status-pill active">실시간</span>
+        </div>
+        <div class="filter-toolbar">
+          <input type="text" value="게시글 제목, 키워드, 작성자 검색" readonly />
+          <span class="status-pill active">전체</span>
+          <span class="status-pill">청년부</span>
+          <span class="status-pill">기도제목</span>
+          <span class="status-pill">새가족</span>
+        </div>
+      </section>
+
+      <section class="detail-split-grid">
+        <article class="member-section">
           <div class="section-title-row church-title-row">
-            <div><p class="church-mono">COMMUNITY FEED</p><h3>전체 게시글 조회</h3></div>
-            <span class="status-pill active">실시간</span>
+            <div><p class="church-mono">POST LIST</p><h3>전체 게시글</h3></div>
+            <a class="text-link" href="church-user-mypage.html">내 스크랩 보기</a>
           </div>
           <div class="community-board-list">
             <article class="board-card"><div><strong>청년부 주중 모임 후기</strong><p>좋아요 48 · 댓글 12 · 스크랩 19</p></div><div class="button-band compact"><a class="solid-chip" href="church-user-community.html">좋아요</a><a class="line-chip" href="church-user-mypage.html">스크랩</a></div></article>
             <article class="board-card"><div><strong>새가족 Q&A 안내</strong><p>카테고리별 정렬 가능 · 운영진 답변 상단 고정</p></div><div class="meta-tags"><span>#새가족</span><span>#Q&A</span><span>#공지연동</span></div></article>
             <article class="board-card"><div><strong>봉사팀 모집 게시판</strong><p>검색, 필터, 상세 보기까지 이어지는 리스트형 UI</p></div><div class="meta-tags"><span>#봉사</span><span>#모집</span><span>#상세보기</span></div></article>
           </div>
-        </section>
+        </article>
+
+        <article class="member-section">
+          <div class="section-title-row church-title-row">
+            <div><p class="church-mono">POST DETAIL</p><h3>게시글 상세 보기</h3></div>
+            <span class="status-pill">읽는 중</span>
+          </div>
+          <div class="profile-summary-card">
+            <strong>청년부 주중 모임 후기</strong>
+            <p>작성자 정유진 · 오늘 13:40 · 좋아요 48 · 댓글 12</p>
+          </div>
+          <div class="timeline-list">
+            <div class="timeline-item"><strong>본문 요약</strong><p>이번 주 모임에서는 찬양과 소그룹 나눔이 특히 좋았고, 새가족 두 분이 함께 참여해 분위기가 더 따뜻했습니다.</p></div>
+            <div class="timeline-item"><strong>댓글 미리보기</strong><p>“사진도 공유해주세요”, “다음 모임 일정 알려주세요” 같은 반응이 이어지고 있습니다.</p></div>
+            <div class="timeline-item"><strong>사용자 액션</strong><p>좋아요, 스크랩, 신고, 공유 버튼을 하단에 배치해 앱 사용 흐름처럼 보이도록 구성했습니다.</p></div>
+          </div>
+          <div class="button-band">
+            <a class="solid-chip" href="church-user-community.html">좋아요</a>
+            <a class="line-chip" href="church-user-mypage.html">스크랩</a>
+            <a class="ghost-chip" href="church-user-support.html">문의하기</a>
+          </div>
+        </article>
       </section>
     </main>
   </body>
